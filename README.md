@@ -1,5 +1,6 @@
 # Sebelum Run App
 Jalankan `npm install` untuk install node_modules
+Dilarang melakukan 'Add' pada forder node_modules!
 
 # Imigrasi UI 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
