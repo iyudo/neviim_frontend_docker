@@ -1,31 +1,12 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-
 import {AppComponent} from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {LoginComponent} from './login/login.component';
-import {JpComponent} from './dataconfig/jp/jp.component';
-import {JdComponent} from './dataconfig/jd/jd.component';
-import {JdpComponent} from './dataconfig/jdp/jdp.component';
-import { AdpComponent } from './dataconfig/adp/adp.component';
-import { StatussipilComponent } from './dataconfig/statussipil/statussipil.component';
 import { KewarganegaraanComponent } from './dataconfig/kewarganegaraan/kewarganegaraan.component';
 import { BankComponent } from './dataconfig/bank/bank.component';
-import { PembatalanComponent } from './dataconfig/pembatalan/pembatalan.component';
-import { PpComponent } from './dataconfig/pp/pp.component';
-import { MbComponent } from './dataconfig/mb/mb.component';
-import { MkComponent } from './dataconfig/mk/mk.component';
-import { TambahjpComponent } from './dataconfig/jp/tambahjp/tambahjp.component';
-import { TambahjdComponent } from './dataconfig/jd/tambahjd/tambahjd.component';
-import { TambahjdpComponent } from './dataconfig/jdp/tambahjdp/tambahjdp.component';
-import { TambahadpComponent } from './dataconfig/adp/tambahadp/tambahadp.component';
-import { TambahssComponent } from './dataconfig/statussipil/tambahss/tambahss.component';
 import { TambahkwComponent } from './dataconfig/kewarganegaraan/tambahkw/tambahkw.component';
 import { TambahbankComponent } from './dataconfig/bank/tambahbank/tambahbank.component';
-import { TambahapComponent } from './dataconfig/pembatalan/tambahap/tambahap.component';
-import { TambahppComponent } from './dataconfig/pp/tambahpp/tambahpp.component';
-import { TambahmbComponent } from './dataconfig/mb/tambahmb/tambahmb.component';
-import { TambahmkComponent } from './dataconfig/mk/tambahmk/tambahmk.component';
 import { ApprovalComponent } from './approval/approval.component';
 import { ApprovalDetailComponent } from './approval/approval-detail/approval-detail.component';
 import { NotificationComponent } from './notification/notification.component';
@@ -38,6 +19,24 @@ import { PencetakanComponent } from './dpri/pencetakan/pencetakan.component';
 import { PenyerahanComponent } from './dpri/penyerahan/penyerahan.component';
 import { PenyerahanEditComponent } from './dpri/penyerahan/penyerahan-edit/penyerahan-edit.component';
 import { PembatalanDpriComponent } from './dpri/pembatalan-dpri/pembatalan-dpri.component';
+import { AlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/alasan-dokumen-perjalanan.component';
+import { TambahAlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan.component';
+import { JenisDokumenComponent } from './dataconfig/jenis-dokumen/jenis-dokumen.component';
+import { TambahJenisDokumenComponent } from './dataconfig/jenis-dokumen/tambah-jenis-dokumen/tambah-jenis-dokumen.component';
+import { JenisDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perjalanan/jenis-dokumen-perjalanan.component';
+import { TambahJenisDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perjalanan/tambah-jenis-dokumen-perjalanan/tambah-jenis-dokumen-perjalanan.component';
+import { JenisPermohonanComponent } from './dataconfig/jenis-permohonan/jenis-permohonan.component';
+import { TambahJenisPermohonanComponent } from './dataconfig/jenis-permohonan/tambah-jenis-permohonan/tambah-jenis-permohonan.component';
+import { MasaBerlakuComponent } from './dataconfig/masa-berlaku/masa-berlaku.component';
+import { TambahMasaBerlakuComponent } from './dataconfig/masa-berlaku/tambah-masa-berlaku/tambah-masa-berlaku.component';
+import { ManajemenKanimComponent } from './dataconfig/manajemen-kanim/manajemen-kanim.component';
+import { TambahManajemenKanimComponent } from './dataconfig/manajemen-kanim/tambah-manajemen-kanim/tambah-manajemen-kanim.component';
+import { AlasanPembatalanComponent } from './dataconfig/alasan-pembatalan/alasan-pembatalan.component';
+import { TambahAlasanPembatalanComponent } from './dataconfig/alasan-pembatalan/tambah-alasan-pembatalan/tambah-alasan-pembatalan.component';
+import { PersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajuan/persyaratan-pengajuan.component';
+import { TambahPersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajuan/tambah-persyaratan-pengajuan/tambah-persyaratan-pengajuan.component';
+import { StatusSipilComponent } from './dataconfig/status-sipil/status-sipil.component';
+import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-status-sipil/tambah-status-sipil.component';
 
 export const router: Routes = [
     {
@@ -103,43 +102,43 @@ export const router: Routes = [
     },
     {
         path:'dataconfig/jp',
-        component:JpComponent
+        component:JenisPermohonanComponent
     },
     {
         path:'dataconfig/tambahjp',
-        component:TambahjpComponent        
+        component:TambahJenisPermohonanComponent        
     },
     {
         path:'dataconfig/jd',
-        component:JdComponent        
+        component:JenisDokumenComponent        
     },
     {
         path:'dataconfig/tambahjd',
-        component:TambahjdComponent        
+        component:TambahJenisDokumenComponent        
     },
     {
         path:'dataconfig/jdp',
-        component:JdpComponent        
+        component:JenisDokumenPerjalananComponent        
     },
     {
         path:'dataconfig/tambahjdp',
-        component:TambahjdpComponent        
+        component:TambahJenisDokumenPerjalananComponent        
     },
     {
         path:'dataconfig/adp',
-        component:AdpComponent        
+        component:AlasanDokumenPerjalananComponent        
     },
     {
         path:'dataconfig/tambahadp',
-        component:TambahadpComponent        
+        component:TambahAlasanDokumenPerjalananComponent        
     },
     {
         path:'dataconfig/statussipil',
-        component:StatussipilComponent        
+        component:StatusSipilComponent        
     },
     {
         path:'dataconfig/tambahss',
-        component:TambahssComponent        
+        component:TambahStatusSipilComponent        
     },
     {
         path:'dataconfig/kewarganegaraan',
@@ -159,35 +158,35 @@ export const router: Routes = [
     },
     {
         path:'dataconfig/pembatalan',
-        component:PembatalanComponent        
+        component:AlasanPembatalanComponent        
     },
     {
         path:'dataconfig/tambahap',
-        component:TambahapComponent        
+        component:TambahAlasanPembatalanComponent        
     },
     {
         path:'dataconfig/pp',
-        component:PpComponent        
+        component:PersyaratanPengajuanComponent        
     },
     {
         path:'dataconfig/tambahpp',
-        component:TambahppComponent        
+        component:TambahPersyaratanPengajuanComponent        
     },
     {
         path:'dataconfig/mb',
-        component:MbComponent                
+        component:MasaBerlakuComponent                
     },
     {
         path:'dataconfig/tambahmb',
-        component:TambahmbComponent        
+        component:TambahMasaBerlakuComponent        
     },
     {
         path:'dataconfig/mk',
-        component:MkComponent        
+        component:ManajemenKanimComponent        
     },
     {
         path:'dataconfig/tambahmk',
-        component:TambahmkComponent        
+        component:TambahManajemenKanimComponent        
     }
         
     
