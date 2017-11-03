@@ -20,16 +20,23 @@ export abstract class BaseService {
       // .catch(this.handleError);
   }
 
-  save(
-    objectName: string, 
-    object: object
-  ) {
+  /**
+   * Generate New ID
+   */
+  loadNewID() {
+    let headers = new Headers({ 'Content-Type': 'application/json'  })
+    let options = new RequestOptions({ headers: headers })
+    return this.http.get(this.apiUrl.concat('add/'), options)
+      .map(res => res.json())
+  }
+
+  save(object: object) {
     let headers = new Headers({
       'Content-Type': 'application/json'
     });
     let options = new RequestOptions({ headers: headers });
     return this.http.post(this.apiUrl.concat('add/'),
-    { objectName : object },
+    { add : object },
     // object,
     options)
     // return this.http.post(this.url.concat('add/'), JSON.stringify(object || null), options)
@@ -37,10 +44,14 @@ export abstract class BaseService {
       // .catch(this.handleError);
   }
 
-  delete(id: string) {
+  update() {
+    
+  }
+
+  delete(object: object) {
     let headers = new Headers({ 'Content-Type': 'application/json' })
     let options = new RequestOptions({ headers: headers })
-    return this.http.delete(this.apiUrl.concat('delete/') + id , options)
+    return this.http.post(this.apiUrl.concat('delete/'), { delete : object }, options)
   }
 
 }

@@ -44,6 +44,8 @@ import { PersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajua
 import { TambahPersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajuan/tambah-persyaratan-pengajuan/tambah-persyaratan-pengajuan.component';
 import { StatusSipilComponent } from './dataconfig/status-sipil/status-sipil.component';
 import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-status-sipil/tambah-status-sipil.component';
+import { AlasanDokPerjalananService } from './_service/dpri/alasan-dok-perjalanan.service';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -98,9 +100,12 @@ import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-sta
     MatNativeDateModule,
     MatExpansionModule,
     BrowserAnimationsModule,
-    routes
+    routes,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    AlasanDokPerjalananService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
