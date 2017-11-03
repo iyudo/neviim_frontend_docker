@@ -1,3 +1,12 @@
+# Sebelum Run App
+Jalankan `npm install` untuk install `node_modules`. 
+
+## Warning
+Dilarang melakukan 'Add', 'Commit', 'Push' pada forder `node_modules`!
+
+## PS
+Gunakan folder `_model/` untuk Object Model class dan folder `_service/` untuk file service ke API
+
 # Imigrasi UI 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
