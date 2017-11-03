@@ -1,18 +1,19 @@
 import { Http, RequestOptions, Headers } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../environments/environment';
+import 'rxjs';
 
-export class BaseService {
+export abstract class BaseService {
 
   apiUrl = environment.apiUrl
   
-  constructor(nextUrl: string, private http: Http) {
-    nextUrl = nextUrl.slice(-1) == '/' ? nextUrl : nextUrl.concat('/')
-    this.apiUrl += nextUrl
+  constructor(private http: Http, path: string,) {
+    path = path.slice(-1) == '/' ? path : path.concat('/')
+    this.apiUrl += path
   }
 
   loadAll() {
-    let headers = new Headers({ 'Content-Type': 'application/json' })
+    let headers = new Headers({ 'Content-Type': 'application/json'  })
     let options = new RequestOptions({ headers: headers })
     return this.http.get(this.apiUrl.concat('list/'), options)
       .map(res => res.json())
@@ -20,7 +21,7 @@ export class BaseService {
   }
 
   save(
-    // objectName: string, 
+    objectName: string, 
     object: object
   ) {
     let headers = new Headers({
@@ -28,8 +29,8 @@ export class BaseService {
     });
     let options = new RequestOptions({ headers: headers });
     return this.http.post(this.apiUrl.concat('add/'),
-    // { objectName : object },
-    object,
+    { objectName : object },
+    // object,
     options)
     // return this.http.post(this.url.concat('add/'), JSON.stringify(object || null), options)
       // .map(res => res.json())
