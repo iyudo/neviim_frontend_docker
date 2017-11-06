@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleAdp} from '../../../app.var';
+import {titleAdp, RouterUrl} from '../../../app.var';
 
 @Component({
   selector: 'app-tambah-alasan-dokumen-perjalanan',
@@ -9,6 +9,8 @@ import {titleAdp} from '../../../app.var';
 export class TambahAlasanDokumenPerjalananComponent implements OnInit {
 
   title:string = titleAdp;
+
+  routerUrl = RouterUrl;
 
   constructor() { }
 

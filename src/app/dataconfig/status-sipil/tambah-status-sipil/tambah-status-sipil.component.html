@@ -15,7 +15,7 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-              <a [routerLink]="['/dataconfig/statussipil']">{{title}}</a>
+              <a [routerLink]="['/'+this.routerUrl.statusSipil]">{{title}}</a>
             </li>
             <li>
               <span class="active">Tambah {{title}}</span>
@@ -28,7 +28,7 @@
             
             <div class="portlet-body">
                
-              <form class="form-horizontal" role="form">
+              <div class="form-horizontal" role="form">
                 <div class="form-body">
                   <div class="form-group">
                       <label class="col-md-3 control-label">ID {{title}}</label>
@@ -64,11 +64,11 @@
                     <div class="row">
                         <div class="col-md-offset-3 col-md-9">
                             <button type="submit" class="btn green">Submit</button>
-                            <button type="button" class="btn default" [routerLink]="['/dataconfig/statussipil']">Back</button>
+                            <button type="button" class="btn default" [routerLink]="['/'+this.routerUrl.statusSipil]">Back</button>
                         </div>
                     </div>
                 </div>
-              </form>
+              </div>
               
             </div>
         </div>

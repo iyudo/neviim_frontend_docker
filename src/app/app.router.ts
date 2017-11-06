@@ -11,14 +11,6 @@ import { ApprovalComponent } from './approval/approval.component';
 import { ApprovalDetailComponent } from './approval/approval-detail/approval-detail.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NotificationDetailComponent } from './notification/notification-detail/notification-detail.component';
-import { PermohonanComponent } from './dpri/permohonan/permohonan.component';
-import { PembayaranComponent } from './dpri/pembayaran/pembayaran.component';
-import { AlokasiComponent } from './dpri/alokasi/alokasi.component';
-import { AlokasiEditComponent } from './dpri/alokasi/alokasi-edit/alokasi-edit.component';
-import { PencetakanComponent } from './dpri/pencetakan/pencetakan.component';
-import { PenyerahanComponent } from './dpri/penyerahan/penyerahan.component';
-import { PenyerahanEditComponent } from './dpri/penyerahan/penyerahan-edit/penyerahan-edit.component';
-import { PembatalanDpriComponent } from './dpri/pembatalan-dpri/pembatalan-dpri.component';
 import { AlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/alasan-dokumen-perjalanan.component';
 import { TambahAlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan.component';
 import { JenisDokumenComponent } from './dataconfig/jenis-dokumen/jenis-dokumen.component';
@@ -37,6 +29,17 @@ import { PersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajua
 import { TambahPersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajuan/tambah-persyaratan-pengajuan/tambah-persyaratan-pengajuan.component';
 import { StatusSipilComponent } from './dataconfig/status-sipil/status-sipil.component';
 import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-status-sipil/tambah-status-sipil.component';
+import { SplpPermohonanComponent } from './splp/splp-permohonan/splp-permohonan.component';
+import { SplpAlokasiComponent } from './splp/splp-alokasi/splp-alokasi.component';
+import { RouterUrl } from './app.var';
+import { DpriAlokasiComponent } from './dpri/dpri-alokasi/dpri-alokasi.component';
+import { DpriAlokasiDetailComponent } from './dpri/dpri-alokasi/dpri-alokasi-detail/dpri-alokasi-detail.component';
+import { DpriPembatalanComponent } from './dpri/dpri-pembatalan/dpri-pembatalan.component';
+import { DpriPembayaranComponent } from './dpri/dpri-pembayaran/dpri-pembayaran.component';
+import { DpriPencetakanComponent } from './dpri/dpri-pencetakan/dpri-pencetakan.component';
+import { DpriPenyerahanComponent } from './dpri/dpri-penyerahan/dpri-penyerahan.component';
+import { DpriPenyerahanDetailComponent } from './dpri/dpri-penyerahan/dpri-penyerahan-detail/dpri-penyerahan-detail.component';
+import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.component';
 
 export const router: Routes = [
     {
@@ -53,139 +56,147 @@ export const router: Routes = [
         component:LoginComponent,        
     },
     {
-        path:'approval',
+        path:RouterUrl.approval,
         component:ApprovalComponent,        
     },
     {
-        path:'approval/approval-detail',
+        path:RouterUrl.approvalDetail,
         component:ApprovalDetailComponent,        
     },
     {
-        path:'notification',
+        path:RouterUrl.notifikasi,
         component:NotificationComponent,        
     },
     {
-        path:'notification/notification-detail',
+        path:RouterUrl.notifikasiDetail,
         component:NotificationDetailComponent,        
     },
     {
-        path:'dpri/permohonan',
-        component:PermohonanComponent
+        path:RouterUrl.dpriPermohonan,
+        component:DpriPermohonanComponent
     },
     {
-        path:'dpri/pembayaran',
-        component:PembayaranComponent
+        path:RouterUrl.dpriPembayaran,
+        component:DpriPembayaranComponent
     },    
     {
-        path:'dpri/alokasi',
-        component:AlokasiComponent
+        path:RouterUrl.dpriAlokasi,
+        component:DpriAlokasiComponent
     },
     {
-        path:'dpri/alokasi/alokasi-edit',
-        component:AlokasiEditComponent
+        path:RouterUrl.dpriAlokasiDetail,
+        component:DpriAlokasiDetailComponent
     },
     {
-        path:'dpri/pencetakan',
-        component:PencetakanComponent
+        path:RouterUrl.dpriPencetakan,
+        component:DpriPencetakanComponent
     },
     {
-        path:'dpri/penyerahan',
-        component:PenyerahanComponent
+        path:RouterUrl.dpriPenyerahan,
+        component:DpriPenyerahanComponent
     },
     {
-        path:'dpri/penyerahan/penyerahan-edit',
-        component:PenyerahanEditComponent
+        path:RouterUrl.dpriPenyerahanDetail,
+        component:DpriPenyerahanDetailComponent
     },
     {
-        path:'dpri/pembatalan-dpri',
-        component:PembatalanDpriComponent
+        path:RouterUrl.dpriPembatalan,
+        component:DpriPembatalanComponent
     },
     {
-        path:'dataconfig/jp',
+        path:'splp/splp-permohonan',
+        component:SplpPermohonanComponent
+    },
+    {
+        path:'splp/splp-alokasi',
+        component:SplpAlokasiComponent
+    },
+    {
+        path: RouterUrl.jenisPermohonan,
         component:JenisPermohonanComponent
     },
     {
-        path:'dataconfig/tambahjp',
+        path:RouterUrl.tambahJenisPermohonan,
         component:TambahJenisPermohonanComponent        
     },
     {
-        path:'dataconfig/jd',
+        path:RouterUrl.jenisDokumen,
         component:JenisDokumenComponent        
     },
     {
-        path:'dataconfig/tambahjd',
+        path:RouterUrl.tambahJenisDokumen,
         component:TambahJenisDokumenComponent        
     },
     {
-        path:'dataconfig/jdp',
+        path:RouterUrl.jenisDokumenPerjalanan,
         component:JenisDokumenPerjalananComponent        
     },
     {
-        path:'dataconfig/tambahjdp',
+        path:RouterUrl.tambahJenisDokumenPerjalanan,
         component:TambahJenisDokumenPerjalananComponent        
     },
     {
-        path:'dataconfig/adp',
+        path:RouterUrl.alasanDokumenPerjalanan,
         component:AlasanDokumenPerjalananComponent        
     },
     {
-        path:'dataconfig/tambahadp',
+        path:RouterUrl.tambahAlasanDokumenPerjalanan,
         component:TambahAlasanDokumenPerjalananComponent        
     },
     {
-        path:'dataconfig/statussipil',
+        path:RouterUrl.statusSipil,
         component:StatusSipilComponent        
     },
     {
-        path:'dataconfig/tambahss',
+        path:RouterUrl.tambahStatusSipil,
         component:TambahStatusSipilComponent        
     },
     {
-        path:'dataconfig/kewarganegaraan',
+        path:RouterUrl.kewarganegaraan,
         component:KewarganegaraanComponent        
     },
     {
-        path:'dataconfig/tambahkw',
+        path:RouterUrl.tambahKewarganegaraan,
         component:TambahkwComponent        
     },
     {
-        path:'dataconfig/bank',
+        path:RouterUrl.bank,
         component:BankComponent        
     },
     {
-        path:'dataconfig/tambahbank',
+        path:RouterUrl.tambahBank,
         component:TambahbankComponent        
     },
     {
-        path:'dataconfig/pembatalan',
+        path:RouterUrl.alasanPembatalan,
         component:AlasanPembatalanComponent        
     },
     {
-        path:'dataconfig/tambahap',
+        path:RouterUrl.tambahAlasanPembatalan,
         component:TambahAlasanPembatalanComponent        
     },
     {
-        path:'dataconfig/pp',
+        path:RouterUrl.persyaratanPengajuan,
         component:PersyaratanPengajuanComponent        
     },
     {
-        path:'dataconfig/tambahpp',
+        path:RouterUrl.tambahPersyaratanPengajuan,
         component:TambahPersyaratanPengajuanComponent        
     },
     {
-        path:'dataconfig/mb',
+        path:RouterUrl.masaBerlaku,
         component:MasaBerlakuComponent                
     },
     {
-        path:'dataconfig/tambahmb',
+        path:RouterUrl.tambahMasaBerlaku,
         component:TambahMasaBerlakuComponent        
     },
     {
-        path:'dataconfig/mk',
+        path:RouterUrl.manajemenKanim,
         component:ManajemenKanimComponent        
     },
     {
-        path:'dataconfig/tambahmk',
+        path:RouterUrl.tambahManajemenKanim,
         component:TambahManajemenKanimComponent        
     }
         

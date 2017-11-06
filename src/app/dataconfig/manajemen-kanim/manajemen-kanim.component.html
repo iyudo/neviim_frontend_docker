@@ -25,14 +25,10 @@
             <div class="portlet-title">
                 <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{title}}</div>
                 <div class="actions">
-                        <a [routerLink]="['/dataconfig/tambahmk']" class="btn btn-outline btn-info btn-sm">
+                        <a [routerLink]="['/'+this.routerUrl.tambahManajemenKanim]" class="btn btn-outline btn-info btn-sm">
                             <i class="fa fa-plus"></i>
                             Add {{title}}
-                        </a>
-                        <a href="#" class="btn btn-outline dark btn-sm">
-                            <i class="fa fa-print"></i>
-                            Print
-                        </a> 
+                        </a>                        
                         <a href="#" class="btn btn-outline green btn-sm">
                             <i class="fa fa-file-pdf-o"></i>
                             PDF
@@ -172,7 +168,7 @@
                   <h4 class="modal-title">Search</h4>
               </div>
               <div class="modal-body"> 
-                  <form class="form-horizontal" role="form">
+                  <div class="form-horizontal" role="form">
                     <div class="form-body">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">ID Workflow</label>
@@ -229,7 +225,7 @@
                                 </div>
                             </div>                                                                                               
                     </div>                    
-                  </form>
+                  </div>
               </div>              
           </div>
           <!-- /.modal-content -->

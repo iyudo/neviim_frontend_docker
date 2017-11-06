@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titlePp} from '../../app.var';
+import {titlePp, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-persyaratan-pengajuan',
@@ -9,6 +9,8 @@ import {titlePp} from '../../app.var';
 export class PersyaratanPengajuanComponent implements OnInit {
 
   title:string = titlePp;
+
+  routerUrl = RouterUrl;
 
   constructor() { }
 

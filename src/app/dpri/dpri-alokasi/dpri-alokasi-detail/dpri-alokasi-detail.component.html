@@ -15,7 +15,7 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-              <a [routerLink]="['/dpri/penyerahan']">Penyerahan</a>
+              <a [routerLink]="['/'+this.routerUrl.dpriAlokasi]">Alokasi</a>
               <i class="fa fa-circle"></i>
             </li>
             <li>
@@ -29,7 +29,7 @@
             
             <div class="portlet-body">
                
-              <form class="form-horizontal" role="form">
+              <div class="form-horizontal" role="form">
                 <div class="form-body">
                   <div class="row">
                       <div class="col-md-6">
@@ -68,15 +68,15 @@
                         </fieldset>
     
                         <fieldset>
-                          <legend>Data Penerima</legend>
+                          <legend>Dokumen Perjalanan</legend>
                           <div class="form-group">
-                              <label class="col-md-5 control-label">Nama</label>
+                              <label class="col-md-5 control-label">Jenis Permohonan</label>
                               <div class="col-md-7">
                                   <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                               </div>
                           </div>
                           <div class="form-group">
-                              <label class="col-md-5 control-label">No. Telepon</label>
+                              <label class="col-md-5 control-label">Jenis Dok Perjalanan</label>
                               <div class="col-md-7">
                                   <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                               </div>
@@ -85,27 +85,27 @@
                       </div>
                       <div class="col-md-6">
                           <fieldset>
-                            <legend>Dokumen Perjalanan</legend>
+                            <legend>Biaya Dokumen Perjalanan</legend>
                             <div class="form-group">
-                                <label class="col-md-5 control-label">Tanggal Permohonan</label>
-                                <div class="col-md-7">
-                                    <p class="form-control-static">13-06-2017</p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-5 control-label">Jenis Permohonan</label>
+                                <label class="col-md-5 control-label">Biaya Dok Perjalanan</label>
                                 <div class="col-md-7">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-5 control-label">Jenis Dok Perjalanan</label>
+                                <label class="col-md-5 control-label">Biaya Biometrik</label>
                                 <div class="col-md-7">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-5 control-label">Jumlah Halaman</label>
+                                <label class="col-md-5 control-label">Denda</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">Total Biaya Permohonan</label>
                                 <div class="col-md-7">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                 </div>
@@ -122,13 +122,17 @@
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                 </div>
                             </div>
+                          </fieldset>
+      
+                          <fieldset>
+                            <legend>Alokasi Paspor</legend>
                             <div class="form-group">
-                                <label class="col-md-5 control-label">No. Paspor</label>
+                                <label class="col-md-5 control-label">No. Paspor*</label>
                                 <div class="col-md-7">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                 </div>
                             </div>
-                          </fieldset>                                
+                          </fieldset>
                       </div>
                   </div>
                 </div>                                                          
@@ -139,7 +143,7 @@
                       <div class="col-md-6">
                         <div class="col-md-offset-5 col-md-7">
                             <button type="submit" class="btn green">Submit</button>
-                            <button type="button" class="btn default" [routerLink]="['/dpri/penyerahan']">Back</button>
+                            <button type="button" class="btn default" [routerLink]="['/'+this.routerUrl.dpriAlokasi]">Back</button>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -148,7 +152,7 @@
                         
                     </div>
                 </div>
-              </form>
+              </div>
               
             </div>
         </div>

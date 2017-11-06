@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleNotifD} from '../../app.var';
+import {titleNotifD, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-notification-detail',
@@ -9,6 +9,8 @@ import {titleNotifD} from '../../app.var';
 export class NotificationDetailComponent implements OnInit {
 
   title:string = titleNotifD;
+
+  routerUrl = RouterUrl;
 
   constructor() { }
 

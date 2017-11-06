@@ -5,13 +5,13 @@
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1>{{title}}
-                <small>Lorem Ipsum & net corem herid</small>
+                <small>Lorem Ipsum & Consectetuer Adipiscing</small>
             </h1>
         </div>
     </div>
     <ul class="page-breadcrumb breadcrumb">
             <li>
-                <span class="active">DPRI</span>
+                <span class="active">SPLP</span>
                 <i class="fa fa-circle"></i>              
             </li>            
             <li>
@@ -25,11 +25,12 @@
             <div class="portlet-title">
                 <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{title}}</div>
                 <div class="actions">
-                       
-                        <a href="#" class="btn btn-outline dark btn-sm">
-                            <i class="fa fa-print"></i>
-                            Print
-                        </a> 
+
+                        <a href="#" class="btn btn-outline btn-info btn-sm">
+                            <i class="fa fa-plus"></i>
+                            Add {{title}}
+                        </a>
+                                              
                         <a href="#" class="btn btn-outline green btn-sm">
                             <i class="fa fa-file-pdf-o"></i>
                             PDF
@@ -42,7 +43,7 @@
             </div>
             <div class="portlet-body">
                
-                <a class="btn btn-outline blue btn-sm" data-toggle="modal" href="#modalalokasi">
+                <a class="btn btn-outline blue btn-sm" data-toggle="modal" href="#modalpermohonansplp">
                     <i class="fa fa-search" aria-hidden="true"></i> Search
                 </a>
                
@@ -54,78 +55,58 @@
                         <th class="text-center">No.</th>                        
                         <th>Kode Permohonan</th>
                         <th>Kode Billing</th>
-                        <th>ID Jurnal</th>
-                        <th>ID Paspor</th>
-                        <th>Nama Lengkap</th>
-                        <th>Jenis Permohonan</th>                        
-                        <th>Jenis Dokumen Perjalanan</th>                        
-                        <th>Tanggal Permohonan</th>                        
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Action</th>                                                                 
+                        <th>Jenis Dokumen</th>                
+                        <th>Tanggal {{title}}</th>                        
+                        <th class="text-center">Status</th>                      
+                        <th class="text-center">Action</th>                   
                     </tr>                                                                       
                     <tr>
                         
                         <td class="text-center">1.</td>
-                        <td>112.1000123</td>
+                        <td>212.1000123</td>
                         <td>82017081500001</td>
-                        <td>001</td>
-                        <td></td>
-                        <td>Adi Wijaya</td>
-                        <td>Permohonan Baru</td>
-                        <td>DPRI Biasa 24 H</td>                                                
+                        <td>SPLP</td>                       
                         <td>06-06-2017</td>
-                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                                        
+                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                        
                         <td class="text-center">
-                            <a [routerLink]="['/dpri/alokasi/alokasi-edit']" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>
+                            <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                        </td>                
                     </tr>
                     <tr>
                         
                         <td class="text-center">2.</td>
-                        <td>112.1000124</td>
+                        <td>212.1000124</td>
                         <td>82017081500002</td>
-                        <td>002</td>
-                        <td></td>
-                        <td>Cut Mini</td>
-                        <td>Permohonan Baru BAP</td>
-                        <td>DPRI Elektronik 48 H</td>                                                
+                        <td>SPLP</td>                       
                         <td>08-06-2017</td>
-                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                                        
-                        <td class="text-center">                            
-                            <a [routerLink]="['/dpri/alokasi/alokasi-edit']" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>
+                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                        
+                        <td class="text-center">
+                            <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                        </td>                
                     </tr>
                     <tr>
                         
                         <td class="text-center">3.</td>
-                        <td>112.1000125</td>
+                        <td>212.1000125</td>
                         <td>82017081500003</td>
-                        <td>003</td>
-                        <td></td>
-                        <td>Arya Wiguna</td>
-                        <td>Pergantian Dokumen</td>
-                        <td>DPRI Biasa 48 H</td>                                                
+                        <td>Pos Lintas Batas</td>                        
                         <td>09-06-2017</td>
-                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                                        
-                        <td class="text-center">                                                        
-                            <a [routerLink]="['/dpri/alokasi/alokasi-edit']" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>
+                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                        
+                        <td class="text-center">
+                            <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                        </td>                
                     </tr>
                     <tr>
                         
                         <td class="text-center">4.</td>
-                        <td>112.1000126</td>
+                        <td>212.1000126</td>
                         <td>82017081500004</td>
-                        <td>004</td>
-                        <td>A11120001</td>
-                        <td>Tri Eka</td>
-                        <td>Permohonan Baru</td>
-                        <td>DPRI Elektronik 24 H</td>                                                
-                        <td>10-06-2017</td>
-                        <td class="text-center"><span class="badge bg-green-jungle">Aktif</span></td>                                        
+                        <td>Pos Lintas Batas</td>                        
+                        <td>13-06-2017</td>
+                        <td class="text-center"><span class="badge badge-danger">Non Aktif</span></td>                        
                         <td class="text-center">
-                            <a href="#" class="btn blue-dark btn-outline btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
-                        </td>
+                            <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                        </td>                
                     </tr>                
                 </table>
                 <div class="btn-group">
@@ -142,7 +123,7 @@
 
 
   <!-- /.modal -->
-  <div class="modal fade bs-modal-lg" id="modalalokasi" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade bs-modal-lg" id="modalpermohonansplp" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg">
           <div class="modal-content">
               <div class="modal-header">
@@ -150,7 +131,7 @@
                   <h4 class="modal-title">Search</h4>
               </div>
               <div class="modal-body"> 
-                  <form class="form-horizontal" role="form">
+                  <div class="form-horizontal" role="form">
                     <div class="form-body">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Kode Permohonan</label>
@@ -167,39 +148,17 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">ID Jurnal</label>
+                                <label class="col-md-4 control-label">Jenis Dokumen</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                                    <span class="help-inline"> Example: 001. </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">ID Paspor</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                                    <span class="help-inline"> Example: A11120001. </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">Jenis Permohonan</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                                    <span class="help-inline"> Example: Permohonan Baru. </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">Jenis Dok. Perjalanan</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                                    <span class="help-inline"> Example: DPRI Biasa 24 H. </span>
+                                    <span class="help-inline"> Example: SPLP. </span>
                                 </div>
                             </div>                            
-                            
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Tanggal Permohonan</label>
+                                <label class="col-md-4 control-label">Tanggal {{title}}</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control input-inline input-medium" [matDatepicker]="tglPerm2Date" (click)="tglPerm2Date.open()" placeholder="Enter text">
-                                    <mat-datepicker #tglPerm2Date></mat-datepicker>
+                                    <input type="text" class="form-control input-inline input-medium" [matDatepicker]="tglPermDate" (click)="tglPermDate.open()" placeholder="Enter text">
+                                    <mat-datepicker #tglPermDate></mat-datepicker>
                                     <span class="help-inline"> Example: mm/dd/yyyy. </span>
                                 </div>
                             </div>                            
@@ -221,7 +180,7 @@
                                 </div>
                             </div>                                                                                               
                     </div>                    
-                  </form>
+                  </div>
               </div>              
           </div>
           <!-- /.modal-content -->
@@ -233,4 +192,3 @@
   <!-- END CONTENT BODY -->
 </div>
 <!-- END CONTENT -->
-

@@ -18,14 +18,6 @@ import { ApprovalDetailComponent } from './approval/approval-detail/approval-det
 import { NotificationComponent } from './notification/notification.component';
 import { NotificationDetailComponent } from './notification/notification-detail/notification-detail.component';
 import {FormsModule} from '@angular/forms';
-import { PermohonanComponent } from './dpri/permohonan/permohonan.component';
-import { PembayaranComponent } from './dpri/pembayaran/pembayaran.component';
-import { AlokasiComponent } from './dpri/alokasi/alokasi.component';
-import { AlokasiEditComponent } from './dpri/alokasi/alokasi-edit/alokasi-edit.component';
-import { PencetakanComponent } from './dpri/pencetakan/pencetakan.component';
-import { PenyerahanComponent } from './dpri/penyerahan/penyerahan.component';
-import { PenyerahanEditComponent } from './dpri/penyerahan/penyerahan-edit/penyerahan-edit.component';
-import { PembatalanDpriComponent } from './dpri/pembatalan-dpri/pembatalan-dpri.component';
 import { AlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/alasan-dokumen-perjalanan.component';
 import { TambahAlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan.component';
 import { JenisDokumenComponent } from './dataconfig/jenis-dokumen/jenis-dokumen.component';
@@ -44,6 +36,16 @@ import { PersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajua
 import { TambahPersyaratanPengajuanComponent } from './dataconfig/persyaratan-pengajuan/tambah-persyaratan-pengajuan/tambah-persyaratan-pengajuan.component';
 import { StatusSipilComponent } from './dataconfig/status-sipil/status-sipil.component';
 import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-status-sipil/tambah-status-sipil.component';
+import { SplpPermohonanComponent } from './splp/splp-permohonan/splp-permohonan.component';
+import { SplpAlokasiComponent } from './splp/splp-alokasi/splp-alokasi.component';
+import { DpriAlokasiComponent } from './dpri/dpri-alokasi/dpri-alokasi.component';
+import { DpriAlokasiDetailComponent } from './dpri/dpri-alokasi/dpri-alokasi-detail/dpri-alokasi-detail.component';
+import { DpriPembatalanComponent } from './dpri/dpri-pembatalan/dpri-pembatalan.component';
+import { DpriPembayaranComponent } from './dpri/dpri-pembayaran/dpri-pembayaran.component';
+import { DpriPencetakanComponent } from './dpri/dpri-pencetakan/dpri-pencetakan.component';
+import { DpriPenyerahanComponent } from './dpri/dpri-penyerahan/dpri-penyerahan.component';
+import { DpriPenyerahanDetailComponent } from './dpri/dpri-penyerahan/dpri-penyerahan-detail/dpri-penyerahan-detail.component';
+import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.component';
 
 
 
@@ -64,14 +66,6 @@ import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-sta
     ApprovalDetailComponent,
     NotificationComponent,
     NotificationDetailComponent,
-    PermohonanComponent,
-    PembayaranComponent,
-    AlokasiComponent,
-    AlokasiEditComponent,
-    PencetakanComponent,
-    PenyerahanComponent,
-    PenyerahanEditComponent,
-    PembatalanDpriComponent,
     AlasanDokumenPerjalananComponent,
     TambahAlasanDokumenPerjalananComponent,
     JenisDokumenComponent,
@@ -89,7 +83,17 @@ import { TambahStatusSipilComponent } from './dataconfig/status-sipil/tambah-sta
     PersyaratanPengajuanComponent,
     TambahPersyaratanPengajuanComponent,
     StatusSipilComponent,
-    TambahStatusSipilComponent 
+    TambahStatusSipilComponent,
+    SplpPermohonanComponent,
+    SplpAlokasiComponent,
+    DpriPermohonanComponent,
+    DpriAlokasiComponent,
+    DpriAlokasiDetailComponent,
+    DpriPembatalanComponent,
+    DpriPembayaranComponent,
+    DpriPencetakanComponent,
+    DpriPenyerahanComponent,
+    DpriPenyerahanDetailComponent 
   ],
   imports: [
     BrowserModule,

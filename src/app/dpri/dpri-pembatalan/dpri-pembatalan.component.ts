@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {titleDpriPembatalan} from '../../app.var';
 
 @Component({
-  selector: 'app-pembatalan-dpri',
-  templateUrl: './pembatalan-dpri.component.html',
-  styleUrls: ['./pembatalan-dpri.component.css']
+  selector: 'app-dpri-pembatalan',
+  templateUrl: './dpri-pembatalan.component.html',
+  styleUrls: ['./dpri-pembatalan.component.css']
 })
-export class PembatalanDpriComponent implements OnInit {
+export class DpriPembatalanComponent implements OnInit {
 
   title:string = titleDpriPembatalan;
 

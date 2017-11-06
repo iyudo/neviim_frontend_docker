@@ -38,7 +38,7 @@
             </div>
             <div class="portlet-body">
                
-                <a class="btn btn-outline blue btn-sm" data-toggle="modal" href="#modalpenyerahan">
+                <a class="btn btn-outline blue btn-sm" data-toggle="modal" href="#modalpencetakan">
                     <i class="fa fa-search" aria-hidden="true"></i> Search
                 </a>
                
@@ -51,7 +51,8 @@
                         <th>Kode Permohonan</th>
                         <th>ID Paspor</th>
                         <th>Kode Billing</th>
-                        <th>ID Jurnal</th>                    
+                        <th>ID Jurnal</th>
+                        <th>Nama Lengkap</th>
                         <th>Jenis Dokumen Perjalanan</th> 
                         <th>Jenis Permohonan</th>                                               
                         <th>Tanggal Permohonan</th>                        
@@ -64,13 +65,14 @@
                         <td>112.1000123</td>
                         <td>A1120001</td>
                         <td>82017081500001</td>
-                        <td>001</td>                        
+                        <td>001</td>
+                        <td>Adi Wijaya</td>
                         <td>DPRI Biasa 24 H</td>
                         <td>Permohonan Baru</td>                                                                        
                         <td>06-06-2017</td>
                         <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>
                         <td class="text-center">
-                          <a [routerLink]="['/dpri/penyerahan/penyerahan-edit']" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                          <a href="#" class="btn green-sharp btn-outline btn-xs"><i class="fa fa-print"></i> Print</a>
                         </td>                                        
                     </tr>
                     <tr>
@@ -79,13 +81,14 @@
                         <td>112.1000124</td>
                         <td>A1120002</td>
                         <td>82017081500002</td>
-                        <td>002</td>                        
+                        <td>002</td>
+                        <td>Budi</td>
                         <td>DPRI Biasa 24 H</td>
                         <td>Pergantian Dokumen</td>                                                                        
                         <td>08-06-2017</td>
                         <td class="text-center"><span class="badge badge-danger">New</span></td>
                         <td class="text-center">
-                          <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                          <a href="#" class="btn green-sharp btn-outline btn-xs"><i class="fa fa-print"></i> Print</a>
                         </td>                
                     </tr>
                     <tr>
@@ -94,13 +97,14 @@
                         <td>112.1000125</td>
                         <td>A1120003</td>
                         <td>82017081500003</td>
-                        <td>003</td>                        
+                        <td>003</td>
+                        <td>Caca</td>
                         <td>DPRI Elektronik 24 H</td>
                         <td>Permohonan Baru BAP</td>                                                                        
                         <td>10-06-2017</td>
                         <td class="text-center"><span class="badge bg-green-jungle">Sudah Dibayar</span></td>
                         <td class="text-center">
-                          <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                          <a href="#" class="btn green-sharp btn-outline btn-xs"><i class="fa fa-print"></i> Print</a>
                         </td>                
                     </tr>
                     <tr>
@@ -109,13 +113,14 @@
                         <td>112.1000126</td>
                         <td>A1120004</td>
                         <td>82017081500004</td>
-                        <td>004</td>                        
+                        <td>004</td>
+                        <td>Dani</td>
                         <td>DPRI Elektronik 48 H</td>
                         <td>Permohonan Baru</td>                                                                        
                         <td>12-06-2017</td>
                         <td class="text-center"><span class="badge bg-green-jungle">Sudah Dibayar</span></td>
                         <td class="text-center">
-                          <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                            <a href="#" class="btn green-sharp btn-outline btn-xs"><i class="fa fa-print"></i> Print</a>
                         </td>                
                     </tr>                
                 </table>
@@ -133,7 +138,7 @@
 
 
   <!-- /.modal -->
-  <div class="modal fade bs-modal-lg" id="modalpenyerahan" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade bs-modal-lg" id="modalpencetakan" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg">
           <div class="modal-content">
               <div class="modal-header">
@@ -141,7 +146,7 @@
                   <h4 class="modal-title">Search</h4>
               </div>
               <div class="modal-body"> 
-                  <form class="form-horizontal" role="form">
+                  <div class="form-horizontal" role="form">
                     <div class="form-body">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Kode Permohonan</label>
@@ -170,7 +175,14 @@
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
                                     <span class="help-inline"> Example: 001. </span>
                                 </div>
-                            </div>                            
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Nama Lengkap</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
+                                    <span class="help-inline"> Example: Adi Wijaya. </span>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Jenis Dok. Perjalanan</label>
                                 <div class="col-md-8">
@@ -211,7 +223,7 @@
                                 </div>
                             </div>                                                                                               
                     </div>                    
-                  </form>
+                </div>
               </div>              
           </div>
           <!-- /.modal-content -->

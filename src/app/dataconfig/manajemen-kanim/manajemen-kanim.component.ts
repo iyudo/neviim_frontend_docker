@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleMk} from '../../app.var';
+import {titleMk, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-manajemen-kanim',
@@ -9,6 +9,8 @@ import {titleMk} from '../../app.var';
 export class ManajemenKanimComponent implements OnInit {
 
   title:string = titleMk;
+
+  routerUrl = RouterUrl;
 
   constructor() { }
 
