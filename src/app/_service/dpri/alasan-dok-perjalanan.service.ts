@@ -8,9 +8,9 @@ let path: string = 'alasan-dok-perjalanan'
 export class AlasanDokPerjalananService extends BaseService {
 
   constructor(
-    http: Http
+    baseHttp: Http
   ) {
-    super(http, path);
+    super(baseHttp, path);
   }
 
 }

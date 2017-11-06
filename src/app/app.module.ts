@@ -46,6 +46,9 @@ import { DpriPencetakanComponent } from './dpri/dpri-pencetakan/dpri-pencetakan.
 import { DpriPenyerahanComponent } from './dpri/dpri-penyerahan/dpri-penyerahan.component';
 import { DpriPenyerahanDetailComponent } from './dpri/dpri-penyerahan/dpri-penyerahan-detail/dpri-penyerahan-detail.component';
 import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.component';
+import { AlasanDokPerjalananService } from './_service/dpri/alasan-dok-perjalanan.service';
+import { HttpModule } from '@angular/http';
+
 
 
 
@@ -102,9 +105,12 @@ import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.
     MatNativeDateModule,
     MatExpansionModule,
     BrowserAnimationsModule,
-    routes
+    routes,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    AlasanDokPerjalananService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
