@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleBank, RouterUrl} from '../../app.var';
+import {TitleConfig, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-bank',
@@ -8,7 +8,7 @@ import {titleBank, RouterUrl} from '../../app.var';
 })
 export class BankComponent implements OnInit {
 
-  title:string = titleBank;
+  title = TitleConfig;
 
   routerUrl = RouterUrl;
 

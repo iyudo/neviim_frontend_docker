@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleKewarganegaraan, RouterUrl} from '../../app.var';
+import {TitleConfig, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-kewarganegaraan',
@@ -8,7 +8,7 @@ import {titleKewarganegaraan, RouterUrl} from '../../app.var';
 })
 export class KewarganegaraanComponent implements OnInit {
 
-  title:string = titleKewarganegaraan;
+  title = TitleConfig;
 
   routerUrl = RouterUrl;
 

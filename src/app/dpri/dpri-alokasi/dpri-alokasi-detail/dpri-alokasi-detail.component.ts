@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleDpriAlokEdit, RouterUrl} from '../../../app.var';
+import {TitleConfig, RouterUrl} from '../../../app.var';
 
 @Component({
   selector: 'app-dpri-alokasi-detail',
@@ -8,7 +8,7 @@ import {titleDpriAlokEdit, RouterUrl} from '../../../app.var';
 })
 export class DpriAlokasiDetailComponent implements OnInit {
 
-  title:string = titleDpriAlokEdit;
+  title = TitleConfig;
 
   routerUrl = RouterUrl;
 

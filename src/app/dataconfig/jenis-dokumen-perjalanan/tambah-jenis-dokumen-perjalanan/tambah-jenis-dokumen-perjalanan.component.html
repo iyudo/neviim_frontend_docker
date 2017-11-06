@@ -4,7 +4,7 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1>Tambah {{title}}
+            <h1>Tambah {{this.title.jenisDokumenPerjalanan}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
         </div>
@@ -15,10 +15,10 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-              <a [routerLink]="['/'+this.routerUrl.jenisDokumenPerjalanan]">{{title}}</a>
+              <a [routerLink]="['/'+this.routerUrl.jenisDokumenPerjalanan]">{{this.title.jenisDokumenPerjalanan}}</a>
             </li>
             <li>
-              <span class="active">Tambah {{title}}</span>
+              <span class="active">Tambah {{this.title.jenisDokumenPerjalanan}}</span>
           </li>
         </ul>
       
@@ -31,14 +31,14 @@
               <div class="form-horizontal" role="form">
                 <div class="form-body">
                   <div class="form-group">
-                      <label class="col-md-3 control-label">ID {{title}}</label>
+                      <label class="col-md-3 control-label">ID {{this.title.jenisDokumenPerjalanan}}</label>
                       <div class="col-md-9">
                           <input type="text" class="form-control input-inline input-medium" placeholder="Enter ID Jenis Permohonan">
                           <span class="help-inline"> Example : JD001. </span>
                       </div>
                   </div>
                   <div class="form-group">
-                      <label class="col-md-3 control-label">{{title}}</label>
+                      <label class="col-md-3 control-label">{{this.title.jenisDokumenPerjalanan}}</label>
                       <div class="col-md-9">
                           <input type="text" class="form-control input-inline input-medium" placeholder="Enter Nama Jenis Permohonan">
                           <span class="help-inline"> Example : DPRI Biasa 24 H </span>

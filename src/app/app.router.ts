@@ -104,11 +104,11 @@ export const router: Routes = [
         component:DpriPembatalanComponent
     },
     {
-        path:'splp/splp-permohonan',
+        path:RouterUrl.splpPermohonan,
         component:SplpPermohonanComponent
     },
     {
-        path:'splp/splp-alokasi',
+        path:RouterUrl.splpAlokasi,
         component:SplpAlokasiComponent
     },
     {

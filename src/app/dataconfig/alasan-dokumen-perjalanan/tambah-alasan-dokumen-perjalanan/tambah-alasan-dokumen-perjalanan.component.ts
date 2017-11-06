@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleAdp, RouterUrl} from '../../../app.var';
+import {TitleConfig, RouterUrl} from '../../../app.var';
 import { Router } from '@angular/router';
 import { AlasanDokPerjalananService } from '../../../_service/dpri/alasan-dok-perjalanan.service';
 import { AlasanDokPerjalanan } from '../../../_model/dpri/alasan-dok-perjalanan';
@@ -13,7 +13,7 @@ import { User } from '../../../_model/_common/user';
 })
 export class TambahAlasanDokumenPerjalananComponent implements OnInit {
 
-  title:string = titleAdp;
+  title = TitleConfig;
   
   alasanDokPerjalanan: AlasanDokPerjalanan = new AlasanDokPerjalanan()
   user: User = new User()

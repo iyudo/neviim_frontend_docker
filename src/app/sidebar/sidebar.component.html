@@ -71,20 +71,20 @@
                         </li>                                                                                                         
                     </ul>                                
                 </li>
-                <li class="nav-item" [ngClass]="{'open active': this.route == '/splp/splp-permohonan' ||  this.route == '/splp/splp-alokasi'}">
+                <li class="nav-item" [ngClass]="{'open active': this.route == '/'+this.routerUrl.splpPermohonan ||  this.route == '/'+this.routerUrl.splpAlokasi}">
                     <a href="#" class="nav-link nav-toggle">
                         <i class="fa fa-address-book" aria-hidden="true"></i>                        
                         <span class="title">SPLP</span>
-                        <span class="arrow" [ngClass]="{'open': this.route == '/splp/splp-permohonan'}"></span>                                    
+                        <span class="arrow" [ngClass]="{'open': this.route == '/'+this.routerUrl.splpPermohonan ||  this.route == '/'+this.routerUrl.splpAlokasi}"></span>                                    
                     </a>
                     <ul class="sub-menu">
-                        <li class="nav-item" [ngClass]="{'active': this.route == '/splp/splp-permohonan'}">
-                            <a [routerLink]="['/splp/splp-permohonan']" class="nav-link ">
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.splpPermohonan}">
+                            <a [routerLink]="['/'+this.routerUrl.splpPermohonan]" class="nav-link ">
                                 <span class="title">Permohonan</span>
                             </a>
                         </li>
-                        <li class="nav-item" [ngClass]="{'active': this.route == '/splp/splp-alokasi'}">
-                            <a [routerLink]="['/splp/splp-alokasi']" class="nav-link ">
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.splpAlokasi}">
+                            <a [routerLink]="['/'+this.routerUrl.splpAlokasi]" class="nav-link ">
                                 <span class="title">Alokasi</span>
                             </a>
                         </li>

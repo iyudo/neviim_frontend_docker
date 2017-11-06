@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleDash} from '../app.var';
+import {TitleConfig} from '../app.var';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,7 @@ import {titleDash} from '../app.var';
 })
 export class DashboardComponent implements OnInit {
  
-  title:string = titleDash;
+  title = TitleConfig;
 
   constructor() { }
   

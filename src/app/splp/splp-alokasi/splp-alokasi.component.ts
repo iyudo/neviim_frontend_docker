@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleSplpAlokasi} from '../../app.var';
+import {TitleConfig} from '../../app.var';
 
 @Component({
   selector: 'app-splp-alokasi',
@@ -8,7 +8,7 @@ import {titleSplpAlokasi} from '../../app.var';
 })
 export class SplpAlokasiComponent implements OnInit {
 
-  title:string = titleSplpAlokasi;
+  title = TitleConfig;
 
   constructor() { }
 

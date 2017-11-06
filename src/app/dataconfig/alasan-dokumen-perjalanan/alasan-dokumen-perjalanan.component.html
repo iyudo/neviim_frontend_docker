@@ -4,7 +4,7 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1>{{title}}
+            <h1>{{this.title.alasanDokumenPerjalanan}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
         </div>
@@ -15,7 +15,7 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-                <span class="active">{{title}}</span>
+                <span class="active">{{this.title.alasanDokumenPerjalanan}}</span>
             </li>
         </ul>
       
@@ -23,7 +23,7 @@
     <div class="col-md-12">
         <div class="portlet light bordered">
             <div class="portlet-title">
-                <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{title}}</div>
+                <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{this.title.alasanDokumenPerjalanan}}</div>
                 <div class="actions">
                         <a [routerLink]="['/'+this.routerUrl.tambahAlasanDokumenPerjalanan]" class="btn btn-outline btn-info btn-sm">
                             <i class="fa fa-plus"></i>
@@ -156,7 +156,7 @@
                   <div class="form-horizontal" role="form">
                     <div class="form-body">
                           <div class="form-group">
-                              <label class="col-md-4 control-label">ID {{title}}</label>
+                              <label class="col-md-4 control-label">ID {{this.title.alasanDokumenPerjalanan}}</label>
                               <div class="col-md-8">
                                   <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
                                   <span class="help-inline"> Example: ADP001. </span>
