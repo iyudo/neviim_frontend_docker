@@ -64,7 +64,7 @@ import { HttpModule } from '@angular/http';
     KewarganegaraanComponent,
     BankComponent,
     TambahkwComponent,
-    TambahbankComponent,    
+    TambahbankComponent,
     ApprovalComponent,
     ApprovalDetailComponent,
     NotificationComponent,
@@ -96,11 +96,12 @@ import { HttpModule } from '@angular/http';
     DpriPembayaranComponent,
     DpriPencetakanComponent,
     DpriPenyerahanComponent,
-    DpriPenyerahanDetailComponent 
+    DpriPenyerahanDetailComponent,
+    TambahStatusSipilComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,     
+    FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatExpansionModule,

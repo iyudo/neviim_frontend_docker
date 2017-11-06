@@ -28,7 +28,7 @@ export const TitleConfig = {
 }
 
 export const RouterUrl = {
-    
+
     jenisPermohonan: 'dataconfig/jenis-permohonan',
     jenisDokumenPerjalanan: 'dataconfig/jenis-dokumen-perjalanan',
     jenisDokumen: 'dataconfig/jenis-dokumen',

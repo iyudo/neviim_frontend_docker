@@ -5,5 +5,7 @@ export class AlasanDokPerjalanan {
   idAlasanDokPerjalanan: string
   description: string
   active: boolean
+  activeStr: string
   user: User
+
 }

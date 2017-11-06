@@ -43,33 +43,33 @@ import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.
 
 export const router: Routes = [
     {
-        path:'',        
+        path:'',
         redirectTo: '/dashboard',
         pathMatch: 'full'
     },
     {
         path:'dashboard',
-        component:DashboardComponent,        
+        component:DashboardComponent,
     },
     {
         path:'login',
-        component:LoginComponent,        
+        component:LoginComponent,
     },
     {
         path:RouterUrl.approval,
-        component:ApprovalComponent,        
+        component:ApprovalComponent,
     },
     {
         path:RouterUrl.approvalDetail,
-        component:ApprovalDetailComponent,        
+        component:ApprovalDetailComponent,
     },
     {
         path:RouterUrl.notifikasi,
-        component:NotificationComponent,        
+        component:NotificationComponent,
     },
     {
         path:RouterUrl.notifikasiDetail,
-        component:NotificationDetailComponent,        
+        component:NotificationDetailComponent,
     },
     {
         path:RouterUrl.dpriPermohonan,
@@ -78,7 +78,7 @@ export const router: Routes = [
     {
         path:RouterUrl.dpriPembayaran,
         component:DpriPembayaranComponent
-    },    
+    },
     {
         path:RouterUrl.dpriAlokasi,
         component:DpriAlokasiComponent
@@ -117,90 +117,90 @@ export const router: Routes = [
     },
     {
         path:RouterUrl.tambahJenisPermohonan,
-        component:TambahJenisPermohonanComponent        
+        component:TambahJenisPermohonanComponent
     },
     {
         path:RouterUrl.jenisDokumen,
-        component:JenisDokumenComponent        
+        component:JenisDokumenComponent
     },
     {
         path:RouterUrl.tambahJenisDokumen,
-        component:TambahJenisDokumenComponent        
+        component:TambahJenisDokumenComponent
     },
     {
         path:RouterUrl.jenisDokumenPerjalanan,
-        component:JenisDokumenPerjalananComponent        
+        component:JenisDokumenPerjalananComponent
     },
     {
         path:RouterUrl.tambahJenisDokumenPerjalanan,
-        component:TambahJenisDokumenPerjalananComponent        
+        component:TambahJenisDokumenPerjalananComponent
     },
     {
         path:RouterUrl.alasanDokumenPerjalanan,
-        component:AlasanDokumenPerjalananComponent        
+        component:AlasanDokumenPerjalananComponent
     },
     {
         path:RouterUrl.tambahAlasanDokumenPerjalanan,
-        component:TambahAlasanDokumenPerjalananComponent        
+        component:TambahAlasanDokumenPerjalananComponent
     },
     {
         path:RouterUrl.statusSipil,
-        component:StatusSipilComponent        
+        component:StatusSipilComponent
     },
     {
         path:RouterUrl.tambahStatusSipil,
-        component:TambahStatusSipilComponent        
+        component:TambahStatusSipilComponent
     },
     {
         path:RouterUrl.kewarganegaraan,
-        component:KewarganegaraanComponent        
+        component:KewarganegaraanComponent
     },
     {
         path:RouterUrl.tambahKewarganegaraan,
-        component:TambahkwComponent        
+        component:TambahkwComponent
     },
     {
         path:RouterUrl.bank,
-        component:BankComponent        
+        component:BankComponent
     },
     {
         path:RouterUrl.tambahBank,
-        component:TambahbankComponent        
+        component:TambahbankComponent
     },
     {
         path:RouterUrl.alasanPembatalan,
-        component:AlasanPembatalanComponent        
+        component:AlasanPembatalanComponent
     },
     {
         path:RouterUrl.tambahAlasanPembatalan,
-        component:TambahAlasanPembatalanComponent        
+        component:TambahAlasanPembatalanComponent
     },
     {
         path:RouterUrl.persyaratanPengajuan,
-        component:PersyaratanPengajuanComponent        
+        component:PersyaratanPengajuanComponent
     },
     {
         path:RouterUrl.tambahPersyaratanPengajuan,
-        component:TambahPersyaratanPengajuanComponent        
+        component:TambahPersyaratanPengajuanComponent
     },
     {
         path:RouterUrl.masaBerlaku,
-        component:MasaBerlakuComponent                
+        component:MasaBerlakuComponent
     },
     {
         path:RouterUrl.tambahMasaBerlaku,
-        component:TambahMasaBerlakuComponent        
+        component:TambahMasaBerlakuComponent
     },
     {
         path:RouterUrl.manajemenKanim,
-        component:ManajemenKanimComponent        
+        component:ManajemenKanimComponent
     },
     {
         path:RouterUrl.tambahManajemenKanim,
-        component:TambahManajemenKanimComponent        
+        component:TambahManajemenKanimComponent
     }
-        
-    
+
+
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
