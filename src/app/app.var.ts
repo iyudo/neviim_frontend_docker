@@ -26,7 +26,7 @@ export const titleSplpPermohonan = "Permohonan"
 export const titleSplpAlokasi = "Alokasi"
 
 export const RouterUrl = {
-    
+
     jenisPermohonan: 'dataconfig/jenis-permohonan',
     jenisDokumenPerjalanan: 'dataconfig/jenis-dokumen-perjalanan',
     jenisDokumen: 'dataconfig/jenis-dokumen',

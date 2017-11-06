@@ -23,11 +23,13 @@ export class TambahAlasanDokumenPerjalananComponent implements OnInit {
   constructor(
     private router: Router,
     private alasanDokPerjalananService: AlasanDokPerjalananService
-  ) { }
+  ) {
+  }
 
 
   ngOnInit() {
     this.onLoadNewId()
+    this.alasanDokPerjalanan.active = false
   }
 
   onLoadNewId() {
@@ -41,10 +43,12 @@ export class TambahAlasanDokumenPerjalananComponent implements OnInit {
   }
 
   onAdpSave() {
-    // this.user.userId = '74b59cfe-6ecb-4b76-b396-9f0a09f6510a'
-    // this.alasanDokPerjalanan.user.u = this.user
-    this.alasanDokPerjalanan.user.userId = '74b59cfe-6ecb-4b76-b396-9f0a09f6510a'
-    this.alasanDokPerjalanan.active = 'aktif' ? true: false
+    //wait for fixing session
+    this.user.userId = '74b59cfe-6ecb-4b76-b396-9f0a09f6510a'
+    this.alasanDokPerjalanan.user = this.user
+
+    this.alasanDokPerjalanan.activeStr = String(this.alasanDokPerjalanan.active)
+
     this.alasanDokPerjalananService.save(this.alasanDokPerjalanan)
     .subscribe(
       success => {

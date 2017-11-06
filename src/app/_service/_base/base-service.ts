@@ -30,28 +30,43 @@ export abstract class BaseService {
       .map(res => res.json())
   }
 
+  /**
+   * Save / Add / Insert
+   * @param object 
+   */
   save(object: object) {
     let headers = new Headers({
       'Content-Type': 'application/json'
     });
     let options = new RequestOptions({ headers: headers });
-    return this.http.post(this.apiUrl.concat('add/'),
-    { add : object },
-    // object,
-    options)
-    // return this.http.post(this.url.concat('add/'), JSON.stringify(object || null), options)
-      // .map(res => res.json())
-      // .catch(this.handleError);
+    return this.http.post(this.apiUrl.concat('add/'), { add : object }, options)
   }
 
-  update() {
-    
+  /**
+   * Edit / Update
+   * @param object 
+   */
+  edit(object: object) {
+    let headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.apiUrl.concat('edit/'), { edit : object }, options)
   }
 
+  /**
+   * Delete / Remove 
+   * @param object 
+   */
   delete(object: object) {
     let headers = new Headers({ 'Content-Type': 'application/json' })
     let options = new RequestOptions({ headers: headers })
     return this.http.post(this.apiUrl.concat('delete/'), { delete : object }, options)
   }
+
+  // handleError(error) {
+  //   console.error(error);
+  //   return Observable.throw(error.json() || 'Server error');
+  // }
 
 }
