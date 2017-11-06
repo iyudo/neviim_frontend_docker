@@ -17,7 +17,15 @@ import { ApprovalComponent } from './approval/approval.component';
 import { ApprovalDetailComponent } from './approval/approval-detail/approval-detail.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NotificationDetailComponent } from './notification/notification-detail/notification-detail.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { PermohonanComponent } from './dpri/permohonan/permohonan.component';
+import { PembayaranComponent } from './dpri/pembayaran/pembayaran.component';
+import { AlokasiComponent } from './dpri/alokasi/alokasi.component';
+import { AlokasiEditComponent } from './dpri/alokasi/alokasi-edit/alokasi-edit.component';
+import { PencetakanComponent } from './dpri/pencetakan/pencetakan.component';
+import { PenyerahanComponent } from './dpri/penyerahan/penyerahan.component';
+import { PenyerahanEditComponent } from './dpri/penyerahan/penyerahan-edit/penyerahan-edit.component';
+import { PembatalanDpriComponent } from './dpri/pembatalan-dpri/pembatalan-dpri.component';
 import { AlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/alasan-dokumen-perjalanan.component';
 import { TambahAlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan/tambah-alasan-dokumen-perjalanan.component';
 import { JenisDokumenComponent } from './dataconfig/jenis-dokumen/jenis-dokumen.component';
@@ -52,6 +60,9 @@ import { HttpModule } from '@angular/http';
 
 
 
+import { JenisDokumenPerjalananService } from '../app/_service/dpri/jenis-dokumen-perjalanan.service';
+import { HttpModule } from '@angular/http';
+import { DataTableModule } from "angular2-datatable";
 
 @NgModule({
   declarations: [
@@ -108,9 +119,13 @@ import { HttpModule } from '@angular/http';
     BrowserAnimationsModule,
     routes,
     HttpModule
+    routes,
+    HttpModule,
+    DataTableModule
   ],
   providers: [
-    AlasanDokPerjalananService
+    AlasanDokPerjalananService,
+    JenisDokumenPerjalananService
   ],
   bootstrap: [AppComponent]
 })

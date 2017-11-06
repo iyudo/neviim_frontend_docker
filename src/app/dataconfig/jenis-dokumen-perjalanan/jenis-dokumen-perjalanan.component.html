@@ -45,46 +45,47 @@
                     <i class="fa fa-search" aria-hidden="true"></i> Search
                 </a>
 
-                <button class="btn btn-outline red btn-sm">
+                <button class="btn btn-outline red btn-sm" (click)="onDeleteJenisDokPerjalanan()">
                     <i class="fa fa-trash" aria-hidden="true"></i> Delete
                 </button>
                
                 <br/>
                 <br/>
-                <table class="table table-striped table-bordered table-advance table-hover" id="sample_1">            
+                <table class="table table-striped table-bordered table-advance table-hover" [mfActivePage]="activePage" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage">            
                     <tr>
                         <th class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                              
                             <input type="checkbox" value="1" name="">
                             <span></span>
                           </label>
                         </th>
                         <th class="text-center">No.</th>
-                        <th>ID {{title}}n</th>
-                        <th>{{title}}</th>
-                        <th>Deskripsi</th>
+                        <th><mfDefaultSorter by="idDokumenPerjalanan">ID {{title}}</mfDefaultSorter></th>
+                        <th><mfDefaultSorter by="namaDokumenPerjalanan">{{title}}</mfDefaultSorter></th>
+                        <th><mfDefaultSorter by="deskDokumenPerjalanan">Deskripsi</mfDefaultSorter></th>
                         <th class="text-center">Status</th>                      
                         <th class="text-center">Action</th>                   
                     </tr>                                                                       
-                    <tr>
+                    <tr *ngFor="let item of mf.data; index as i">
                         <td class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                              
-                            <input type="checkbox" value="2" name="">
+                            <input type="checkbox" value="2" name="" value="{{item.id}}" (change)="select(option, $event)">
                             <span></span>
                           </label>
                         </td>
-                        <td class="text-center">1.</td>
-                        <td>JD001</td>
-                        <td>DPRI Biasa 24 H</td>
-                        <td>Dokumen Perjalanan Republik Indonesia Biasa 24 Halaman</td>
-                        <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>                        
+                        <td class="text-center">{{((activePage - 1)*rowsOnPage) + i + 1}}</td>
+                        <td>{{item.idDokumenPerjalanan}}</td>
+                        <td>{{item.namaDokumenPerjalanan}}</td>
+                        <td>{{item.deskDokumenPerjalanan}}</td>
+                        <td class="text-center">
+                            <span class="badge bg-green-meadow" *ngIf="item.activeStr == 'true'">Aktif</span>
+                            <span class="badge badge-danger" *ngIf="item.activeStr == 'false'">Non Aktif</span>
+                        </td>                        
                         <td class="text-center">
                           <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
                         </td>                
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
                              
@@ -134,14 +135,19 @@
                         <td class="text-center">
                           <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
                         </td>                
-                    </tr>                
+                    </tr>                 -->
+                    <tr>
+                        <td colspan="7">
+                            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]" (click)="setNewPage(mf.activePage)"></mfBootstrapPaginator>
+                        </td>
+                    </tr>
                 </table>
-                <div class="btn-group">
+                <!-- <div class="btn-group">
                     <button type="button" class="btn btn-default">1</button>
                     <button type="button" class="btn btn-default">2</button>
                     <button type="button" class="btn btn-default">3</button>
                     <button type="button" class="btn btn-default">4</button>
-                </div>                
+                </div>                 -->
             </div>
         </div>
     </div>
