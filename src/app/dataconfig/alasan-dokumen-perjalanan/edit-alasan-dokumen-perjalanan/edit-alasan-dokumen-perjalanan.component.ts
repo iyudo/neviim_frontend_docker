@@ -40,4 +40,16 @@ export class EditAlasanDokumenPerjalananComponent implements OnInit {
     )
   }
 
+  onEditAdp() {
+    this.alasanDokPerjalananService.edit(this.alasanDokPerjalanan).subscribe(
+      output => {
+        console.log(output)
+        this.alasanDokPerjalanan = new AlasanDokPerjalanan()
+        this.router.navigate(['/' + this.routerUrl.alasanDokumenPerjalanan])
+      }, error => {
+        console.log(error)
+      }
+    )
+  }
+
 }
