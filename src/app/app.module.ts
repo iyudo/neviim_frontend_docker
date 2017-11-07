@@ -48,6 +48,7 @@ import { DpriPenyerahanDetailComponent } from './dpri/dpri-penyerahan/dpri-penye
 import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.component';
 import { AlasanDokPerjalananService } from './_service/dpri/alasan-dok-perjalanan.service';
 import { HttpModule } from '@angular/http';
+import { EditAlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokumen-perjalanan/edit-alasan-dokumen-perjalanan/edit-alasan-dokumen-perjalanan.component';
 
 
 
@@ -97,7 +98,8 @@ import { HttpModule } from '@angular/http';
     DpriPencetakanComponent,
     DpriPenyerahanComponent,
     DpriPenyerahanDetailComponent,
-    TambahStatusSipilComponent
+    TambahStatusSipilComponent,
+    EditAlasanDokumenPerjalananComponent
   ],
   imports: [
     BrowserModule,

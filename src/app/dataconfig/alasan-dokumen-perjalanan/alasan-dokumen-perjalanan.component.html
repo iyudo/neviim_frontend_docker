@@ -1,5 +1,4 @@
 <div class="page-content-wrapper">
-<<<<<<< HEAD
   <!-- BEGIN CONTENT BODY -->
   <div class="page-content">
     <div class="page-head">
@@ -8,18 +7,8 @@
             <h1>{{this.title.alasanDokumenPerjalanan}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
-=======
-    <!-- BEGIN CONTENT BODY -->
-    <div class="page-content">
-        <div class="page-head">
-            <!-- BEGIN PAGE TITLE -->
-            <div class="page-title">
-                <h1>{{title}}
-                    <small>Lorem Ipsum & net corem herid</small>
-                </h1>
-            </div>
->>>>>>> caeaba31be6ebad04380f1321c9a4622225b5c5b
         </div>
+    </div>
         <ul class="page-breadcrumb breadcrumb">
             <li>
                 <span class="active">Konfigurasi Data</span>
@@ -38,7 +27,7 @@
                 <div class="actions">
                         <a [routerLink]="['/'+this.routerUrl.tambahAlasanDokumenPerjalanan]" class="btn btn-outline btn-info btn-sm">
                             <i class="fa fa-plus"></i>
-                            Add {{title}}
+                            Add {{this.title.alasanDokumenPerjalanan}}
                         </a>
                         <a href="#" class="btn btn-outline green btn-sm">
                             <i class="fa fa-file-pdf-o"></i>
@@ -72,7 +61,7 @@
                                     </label>
                                 </th>
                                 <th class="text-center">No.</th>
-                                <th>ID {{title}}</th>
+                                <th>ID {{ this.title.alasanDokumenPerjalanan }}</th>
                                 <th>Deskripsi</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Action</th>
@@ -95,7 +84,6 @@
                                     <span *ngIf="this.alasanDokPerjalanan.active" class="badge bg-green-meadow">
                                         Aktif
                                     </span>
-
                                     <span *ngIf="!this.alasanDokPerjalanan.active" class="badge badge-danger" >
                                         Non Aktif
                                     </span>
@@ -105,83 +93,6 @@
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
                                 </td>
                             </tr>
-
-                            <!-- <tr>
-                                <td class="text-center">
-                                    <label class="mt-checkbox mt-checkbox-outline">
-
-                                        <input type="checkbox" value="2" name="">
-                                        <span></span>
-                                    </label>
-                                </td>
-                                <td class="text-center">1.</td>
-                                <td>ADP001</td>
-                                <td>Habis Berlaku</td>
-                                <td class="text-center">
-                                    <span class="badge bg-green-meadow">Aktif</span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="#" class="btn yellow-mint btn-outline btn-xs">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <label class="mt-checkbox mt-checkbox-outline">
-
-                                        <input type="checkbox" value="3" name="">
-                                        <span></span>
-                                    </label>
-                                </td>
-                                <td class="text-center">2.</td>
-                                <td>ADP002</td>
-                                <td>Halaman Penuh</td>
-                                <td class="text-center">
-                                    <span class="badge bg-green-meadow">Aktif</span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="#" class="btn yellow-mint btn-outline btn-xs">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <label class="mt-checkbox mt-checkbox-outline">
-
-                                        <input type="checkbox" value="4" name="">
-                                        <span></span>
-                                    </label>
-                                </td>
-                                <td class="text-center">3.</td>
-                                <td>ADP003</td>
-                                <td>Hilang</td>
-                                <td class="text-center">
-                                    <span class="badge bg-green-meadow">Aktif</span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="#" class="btn yellow-mint btn-outline btn-xs">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <label class="mt-checkbox mt-checkbox-outline">
-
-                                        <input type="checkbox" value="5" name="">
-                                        <span></span>
-                                    </label>
-                                </td>
-                                <td class="text-center">4.</td>
-                                <td>ADP004</td>
-                                <td>Rusak</td>
-                                <td class="text-center">
-                                    <span class="badge bg-green-meadow">Aktif</span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="#" class="btn yellow-mint btn-outline btn-xs">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                                </td>
-                            </tr> -->
                         </table>
                         <div class="btn-group">
                             <button type="button" class="btn btn-default">1</button>

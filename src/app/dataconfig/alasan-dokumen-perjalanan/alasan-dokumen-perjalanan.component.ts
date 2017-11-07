@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import {TitleConfig, RouterUrl} from '../../app.var';
-=======
-import { titleAdp, RouterUrl } from '../../app.var';
+import { TitleConfig, RouterUrl } from '../../app.var';
 import { Router } from '@angular/router';
 import { AlasanDokPerjalananService } from '../../_service/dpri/alasan-dok-perjalanan.service';
 import { AlasanDokPerjalanan } from '../../_model/dpri/alasan-dok-perjalanan';
->>>>>>> caeaba31be6ebad04380f1321c9a4622225b5c5b
 
 @Component({
   selector: 'app-alasan-dokumen-perjalanan',
@@ -15,11 +11,7 @@ import { AlasanDokPerjalanan } from '../../_model/dpri/alasan-dok-perjalanan';
 })
 export class AlasanDokumenPerjalananComponent implements OnInit {
 
-<<<<<<< HEAD
   title = TitleConfig;
-=======
-  title: string = titleAdp;
->>>>>>> caeaba31be6ebad04380f1321c9a4622225b5c5b
 
   routerUrl = RouterUrl;
 

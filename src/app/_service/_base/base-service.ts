@@ -64,6 +64,16 @@ export abstract class BaseService {
     return this.http.post(this.apiUrl.concat('delete/'), { delete : object }, options)
   }
 
+  /**
+   * Find One
+   * @param object 
+   */
+  findOne(object: object) {
+    let headers = new Headers({ 'Content-Type': 'application/json' })
+    let options = new RequestOptions({ headers: headers })
+    return this.http.get(this.apiUrl.concat('find/'), options)
+    .map(res => res.json())
+  }
   // handleError(error) {
   //   console.error(error);
   //   return Observable.throw(error.json() || 'Server error');

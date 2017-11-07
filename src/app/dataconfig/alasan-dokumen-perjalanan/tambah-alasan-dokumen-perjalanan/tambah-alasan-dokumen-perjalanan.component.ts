@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AlasanDokPerjalananService } from '../../../_service/dpri/alasan-dok-perjalanan.service';
 import { AlasanDokPerjalanan } from '../../../_model/dpri/alasan-dok-perjalanan';
 import { User } from '../../../_model/_common/user';
+import { AppComponent } from '../../../app.component';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class TambahAlasanDokumenPerjalananComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private alasanDokPerjalananService: AlasanDokPerjalananService
+    private alasanDokPerjalananService: AlasanDokPerjalananService,
   ) {
   }
 
@@ -34,8 +35,8 @@ export class TambahAlasanDokumenPerjalananComponent implements OnInit {
 
   onLoadNewId() {
     this.alasanDokPerjalananService.loadNewID().subscribe(
-      output => {
-        this.alasanDokPerjalanan = output
+      success => {
+        this.alasanDokPerjalanan = success
       }, error => {
         console.log("error load category\n" + error)
       }
@@ -54,7 +55,7 @@ export class TambahAlasanDokumenPerjalananComponent implements OnInit {
       success => {
         console.log(success)
         this.alasanDokPerjalanan = new AlasanDokPerjalanan()
-        this.router.navigate(['/dataconfig/adp'])
+        this.router.navigate([this.routerUrl.alasanDokumenPerjalanan])
       }, error => {
         console.log('Something Wrong')
         console.log(error)
