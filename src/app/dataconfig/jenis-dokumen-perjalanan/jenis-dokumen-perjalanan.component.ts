@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { JenisDokumenPerjalananService } from '../../_service/dpri/jenis-dokumen-perjalanan.service';
-// import { JenisDokumenPerjalanan } from '../../_model/dpri/jenis-dokumen-perjalanan';
+import { JenisDokumenPerjalanan } from '../../_model/dpri/jenis-dokumen-perjalanan';
 import { DataTable } from 'angular2-datatable';
 import { TitleConfig, RouterUrl } from '../../app.var';
 
