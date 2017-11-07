@@ -42,22 +42,22 @@ export class JenisDokumenPerjalananComponent implements OnInit {
   onDeleteJenisDokPerjalanan() {
     if(this.jenisDokPerjalanan.length > 0) {
       console.log(this.jenisDokPerjalanan);
-      // this.jenisDokumenPerjalananService.delete(this.jenisDokPerjalanan).subscribe(
-      //   output => {
-      //     this.loadJenisDokPerjalanan();
-      //     this.jenisDokPerjalanan = [];
-      //   },
-      //   error => {
-      //     console.log(error);
-      //   }
-      // )
+      this.jenisDokumenPerjalananService.delete(this.jenisDokPerjalanan).subscribe(
+        output => {
+          this.loadJenisDokPerjalanan();
+          this.jenisDokPerjalanan = [];
+        },
+        error => {
+          console.log(error);
+        }
+      )
     } else {
       console.log("Empty Data!");
     }
   }
 
   onEditJdp(item) {
-    
+
   }
 
   setNewPage(activePage: number) {
@@ -66,14 +66,13 @@ export class JenisDokumenPerjalananComponent implements OnInit {
   }
 
   toggleSelect = function(jenisDokPerjalanan,event){
-    if(event.target.checked) {
-      this.data.slice(((this.activePage-1)*this.rowsOnPage),(this.activePage*this.rowsOnPage)).forEach(function(item){
-        let jDokPerjalanan: JenisDokumenPerjalanan = new JenisDokumenPerjalanan();
-        jDokPerjalanan.id = item.id;
-        jenisDokPerjalanan.push(jDokPerjalanan);
-        item.selected = event.target.checked;
-      });
-    } else {
+    this.data.slice(((this.activePage-1)*this.rowsOnPage),(this.activePage*this.rowsOnPage)).forEach(function(item){
+      let jDokPerjalanan: JenisDokumenPerjalanan = new JenisDokumenPerjalanan();
+      jDokPerjalanan.id = item.id;
+      jenisDokPerjalanan.push(jDokPerjalanan);
+      item.selected = event.target.checked;
+    });
+    if(!event.target.checked) {
       jenisDokPerjalanan = [];
     }
   }
