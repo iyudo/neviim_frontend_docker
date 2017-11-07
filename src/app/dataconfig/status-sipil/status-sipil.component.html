@@ -4,7 +4,7 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1>{{title}}
+            <h1>{{this.title.statusSipil}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
         </div>
@@ -15,7 +15,7 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-                <span class="active">{{title}}</span>
+                <span class="active">{{this.title.statusSipil}}</span>
             </li>
         </ul>
       
@@ -27,7 +27,7 @@
                 <div class="actions">
                         <a [routerLink]="['/'+this.routerUrl.tambahStatusSipil]" class="btn btn-outline btn-info btn-sm">
                             <i class="fa fa-plus"></i>
-                            Add {{title}}
+                            Add {{this.title.statusSipil}}
                         </a>                        
                         <a href="#" class="btn btn-outline green btn-sm">
                             <i class="fa fa-file-pdf-o"></i>
@@ -61,8 +61,8 @@
                           </label>
                         </th>
                         <th class="text-center">No.</th>
-                        <th>ID {{title}}</th>
-                        <th>{{title}}</th>
+                        <th>ID {{this.title.statusSipil}}</th>
+                        <th>{{this.title.statusSipil}}</th>
                         <th class="text-center">Status</th>                      
                         <th class="text-center">Action</th>                   
                     </tr>                                                                       
@@ -156,14 +156,14 @@
                   <div class="form-horizontal" role="form">
                     <div class="form-body">
                           <div class="form-group">
-                              <label class="col-md-4 control-label">ID {{title}}</label>
+                              <label class="col-md-4 control-label">ID {{this.title.statusSipil}}</label>
                               <div class="col-md-8">
                                   <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
                                   <span class="help-inline"> Example: SS001. </span>
                               </div>
                           </div>
                           <div class="form-group">
-                              <label class="col-md-4 control-label">{{title}}</label>
+                              <label class="col-md-4 control-label">{{this.title.statusSipil}}</label>
                               <div class="col-md-8">
                                   <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
                                   <span class="help-inline"> Example: Belum Menikah. </span>

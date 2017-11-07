@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleApprD, RouterUrl} from '../../app.var';
+import {TitleConfig, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-approval-detail',
@@ -8,7 +8,7 @@ import {titleApprD, RouterUrl} from '../../app.var';
 })
 export class ApprovalDetailComponent implements OnInit {
 
-  title:string = titleApprD;
+  title = TitleConfig;
   date:any;
 
   routerUrl = RouterUrl;

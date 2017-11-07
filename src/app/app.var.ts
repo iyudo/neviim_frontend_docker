@@ -1,29 +1,31 @@
-export const titleDash = "Dashboard"
-export const titleJp = "Jenis Permohonan"
-export const titleJdp = "Jenis Dokumen Perjalanan"
-export const titleJd = "Jenis Dokumen"
-export const titleAdp = "Alasan Dokumen Perjalanan"
-export const titleSs = "Status Sipil"
-export const titleKewarganegaraan = "Kewarganegaraan"
-export const titleBank = "Bank"
-export const titlePembatalan = "Alasan Pembatalan"
-export const titlePp = "Persyaratan Pengajuan"
-export const titleMb = "Masa Berlaku"
-export const titleMk = "Manajemen Kanim"
-export const titleAppr = "Approval"
-export const titleApprD = "Approval Detail"
-export const titleNotif = "Notifikasi"
-export const titleNotifD = "Notifikasi Detail"
-export const titleDpriPerm = "Permohonan"
-export const titleDpriPemb = "Pembayaran"
-export const titleDpriAlok = "Alokasi"
-export const titleDpriAlokEdit = "Alokasi Edit"
-export const titleDpriPencetakan = "Pencetakan"
-export const titleDpriPenyerahan = "Penyerahan"
-export const titleDpriPenyerahanEdit = "Penyerahan Edit"
-export const titleDpriPembatalan = "Pembatalan"
-export const titleSplpPermohonan = "Permohonan"
-export const titleSplpAlokasi = "Alokasi"
+export const TitleConfig = {
+    dashboard : "Dashboard",
+    jenisPermohonan : "Jenis Permohonan",
+    jenisDokumenPerjalanan : "Jenis Dokumen Perjalanan",
+    jenisDokumen : "Jenis Dokumen",
+    alasanDokumenPerjalanan : "Alasan Dokumen Perjalanan",
+    statusSipil : "Status Sipil",
+    kewarganegaraan : "Kewarganegaraan",
+    bank : "Bank",
+    alasanPembatalan : "Alasan Pembatalan",
+    persyaratanPengajuan : "Persyaratan Pengajuan",
+    masaBerlaku : "Masa Berlaku",
+    manajemenKanim : "Manajemen Kanim",
+    approval : "Approval",
+    approvalDetail : "Approval Detail",
+    notifikasi : "Notifikasi",
+    notifikasiDetail : "Notifikasi Detail",
+    dpriPermohonan : "Permohonan",
+    dpriPembayaran : "Pembayaran",
+    dpriAlokasi : "Alokasi",
+    dpriAlokasiDetail : "Alokasi Detail",
+    dpriPencetakan : "Pencetakan",
+    dpriPenyerahan : "Penyerahan",
+    dpriPenyerahanDetail : "Penyerahan Edit",
+    dpriPembatalan : "Pembatalan",
+    splpPermohonan : "Permohonan",
+    splpAlokasi : "Alokasi"
+}
 
 export const RouterUrl = {
 
@@ -60,6 +62,8 @@ export const RouterUrl = {
     dpriPenyerahan: 'dpri/penyerahan',
     dpriPembatalan: 'dpri/pembatalan',
     dpriAlokasiDetail: 'dpri/alokasi/detail',
-    dpriPenyerahanDetail: 'dpri/penyerahan/detail'
+    dpriPenyerahanDetail: 'dpri/penyerahan/detail',
+    splpAlokasi:'splp/splp-alokasi',
+    splpPermohonan:'splp/splp-permohonan'
 
 }

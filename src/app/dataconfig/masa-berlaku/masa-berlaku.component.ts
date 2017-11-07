@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleMb, RouterUrl} from '../../app.var';
+import {TitleConfig, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-masa-berlaku',
@@ -8,7 +8,7 @@ import {titleMb, RouterUrl} from '../../app.var';
 })
 export class MasaBerlakuComponent implements OnInit {
   
-  title:string = titleMb;
+  title = TitleConfig;
 
   routerUrl = RouterUrl;
   

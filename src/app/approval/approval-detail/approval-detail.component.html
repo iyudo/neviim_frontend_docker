@@ -4,18 +4,18 @@
       <div class="page-head">
           <!-- BEGIN PAGE TITLE -->
           <div class="page-title">
-              <h1>{{title}}
+              <h1>{{this.title.approvalDetail}}
                   <small>Lorem Ipsum & net corem herid</small>
               </h1>
           </div>
       </div>
       <ul class="page-breadcrumb breadcrumb">
             <li>
-                <a [routerLink]="['/'+this.routerUrl.approval]">Approval</a>
+                <a [routerLink]="['/'+this.routerUrl.approval]">{{this.title.approval}}</a>
                 <i class="fa fa-circle"></i>
             </li>                         
             <li>
-                <span class="active">{{title}}</span>
+                <span class="active">{{this.title.approvalDetail}}</span>
                 <i class="fa fa-circle"></i>  
             </li>
           </ul>

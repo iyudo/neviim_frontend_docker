@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleDpriPenyerahanEdit, RouterUrl} from '../../../app.var';
+import {TitleConfig, RouterUrl} from '../../../app.var';
 
 @Component({
   selector: 'app-dpri-penyerahan-detail',
@@ -8,7 +8,7 @@ import {titleDpriPenyerahanEdit, RouterUrl} from '../../../app.var';
 })
 export class DpriPenyerahanDetailComponent implements OnInit {
 
-  title:string = titleDpriPenyerahanEdit;
+  title = TitleConfig;
 
   routerUrl = RouterUrl;
 

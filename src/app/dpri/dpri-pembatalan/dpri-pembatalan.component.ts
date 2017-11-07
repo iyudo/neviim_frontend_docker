@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleDpriPembatalan} from '../../app.var';
+import {TitleConfig} from '../../app.var';
 
 @Component({
   selector: 'app-dpri-pembatalan',
@@ -8,7 +8,7 @@ import {titleDpriPembatalan} from '../../app.var';
 })
 export class DpriPembatalanComponent implements OnInit {
 
-  title:string = titleDpriPembatalan;
+  title = TitleConfig;
 
   constructor() { }
 

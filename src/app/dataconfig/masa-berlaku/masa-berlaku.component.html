@@ -4,7 +4,7 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1>{{title}}
+            <h1>{{this.title.masaBerlaku}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
         </div>
@@ -15,7 +15,7 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-                <span class="active">{{title}}</span>
+                <span class="active">{{this.title.masaBerlaku}}</span>
             </li>
         </ul>
       
@@ -23,11 +23,11 @@
     <div class="col-md-12">
         <div class="portlet light bordered">
             <div class="portlet-title">
-                <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{title}}</div>
+                <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{this.title.masaBerlaku}}</div>
                 <div class="actions">
                         <a [routerLink]="['/'+this.routerUrl.tambahMasaBerlaku]" class="btn btn-outline btn-info btn-sm">
                             <i class="fa fa-plus"></i>
-                            Add {{title}}
+                            Add {{this.title.masaBerlaku}}
                         </a>                       
                         <a href="#" class="btn btn-outline green btn-sm">
                             <i class="fa fa-file-pdf-o"></i>
@@ -61,9 +61,9 @@
                           </label>
                         </th>
                         <th class="text-center">No.</th>                        
-                        <th>ID {{title}}</th>
+                        <th>ID {{this.title.masaBerlaku}}</th>
                         <th>Jenis Dokumen</th>
-                        <th>{{title}}</th>
+                        <th>{{this.title.masaBerlaku}}</th>
                         <th>Valid Start Date</th>
                         <th>Valid End Date</th>                        
                         <th class="text-center">Status</th>                      
@@ -171,7 +171,7 @@
                   <div class="form-horizontal" role="form">
                     <div class="form-body">
                             <div class="form-group">
-                                <label class="col-md-4 control-label">ID {{title}}</label>
+                                <label class="col-md-4 control-label">ID {{this.title.masaBerlaku}}</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                     <span class="help-inline"> Example: MB001. </span>
@@ -185,7 +185,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">{{title}}</label>
+                                <label class="col-md-4 control-label">{{this.title.masaBerlaku}}</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
                                     <span class="help-inline"> Example: 5 Tahun. </span>

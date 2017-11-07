@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {titleDpriPerm} from '../../app.var';
+import {TitleConfig} from '../../app.var';
 
 @Component({
   selector: 'app-dpri-permohonan',
@@ -8,7 +8,7 @@ import {titleDpriPerm} from '../../app.var';
 })
 export class DpriPermohonanComponent implements OnInit {
 
-  title:string = titleDpriPerm;
+  title = TitleConfig;
 
   constructor() { }
 

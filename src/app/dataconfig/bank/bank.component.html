@@ -4,7 +4,7 @@
       <div class="page-head">
           <!-- BEGIN PAGE TITLE -->
           <div class="page-title">
-              <h1>{{title}}
+              <h1>{{this.title.bank}}
                   <small>Lorem Ipsum & net corem herid</small>
               </h1>
           </div>
@@ -15,7 +15,7 @@
                 <i class="fa fa-circle"></i>              
             </li>
               <li>
-                  <span class="active">{{title}}</span>
+                  <span class="active">{{tithis.title.banktle}}</span>
               </li>
           </ul>
         
@@ -23,11 +23,11 @@
       <div class="col-md-12">
           <div class="portlet light bordered">
               <div class="portlet-title">
-                  <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{title}}</div>
+                  <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{this.title.bank}}</div>
                   <div class="actions">
                           <a [routerLink]="['/'+this.routerUrl.tambahBank]" class="btn btn-outline btn-info btn-sm">
                               <i class="fa fa-plus"></i>
-                              Add {{title}}
+                              Add {{this.title.bank}}
                           </a>                          
                           <a href="#" class="btn btn-outline green btn-sm">
                               <i class="fa fa-file-pdf-o"></i>
@@ -61,8 +61,8 @@
                             </label>
                           </th>
                           <th class="text-center">No.</th>
-                          <th>ID {{title}}</th>
-                          <th>Nama {{title}}</th>
+                          <th>ID {{this.title.bank}}</th>
+                          <th>Nama {{this.title.bank}}</th>
                           <th>Deskripsi</th>
                           <th class="text-center">Status</th>                      
                           <th class="text-center">Action</th>                   
@@ -161,14 +161,14 @@
                     <div class="form-horizontal" role="form">
                       <div class="form-body">
                             <div class="form-group">
-                                <label class="col-md-4 control-label">ID {{title}}</label>
+                                <label class="col-md-4 control-label">ID {{this.title.bank}}</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                     <span class="help-inline"> Example: BK001. </span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Nama {{title}}</label>
+                                <label class="col-md-4 control-label">Nama {{this.title.bank}}</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                                     <span class="help-inline"> Example: BCA. </span>

@@ -4,18 +4,18 @@
       <div class="page-head">
           <!-- BEGIN PAGE TITLE -->
           <div class="page-title">
-              <h1>{{title}}
+              <h1>{{this.title.notifikasiDetail}}
                   <small>Lorem Ipsum & net corem herid</small>
               </h1>
           </div>
       </div>
       <ul class="page-breadcrumb breadcrumb">
             <li>
-                <a [routerLink]="['/'+this.routerUrl.notifikasi]">Notifikasi</a>
+                <a [routerLink]="['/'+this.routerUrl.notifikasi]">{{this.title.notifikasi}}</a>
                 <i class="fa fa-circle"></i>
             </li>                         
             <li>
-                <span class="active">{{title}}</span>
+                <span class="active">{{this.title.notifikasiDetail}}</span>
                 <i class="fa fa-circle"></i>  
             </li>
           </ul>

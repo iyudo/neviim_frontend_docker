@@ -4,7 +4,7 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1>Tambah {{title}}
+            <h1>Tambah {{this.title.jenisDokumen}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
         </div>
@@ -15,10 +15,10 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-              <a [routerLink]="['/'+this.routerUrl.jenisDokumen]">{{title}}</a>
+              <a [routerLink]="['/'+this.routerUrl.jenisDokumen]">{{this.title.jenisDokumen}}</a>
             </li>
             <li>
-              <span class="active">Tambah {{title}}</span>
+              <span class="active">Tambah {{this.title.jenisDokumen}}</span>
           </li>
         </ul>
       
@@ -31,14 +31,14 @@
               <div class="form-horizontal" role="form">
                 <div class="form-body">
                   <div class="form-group">
-                      <label class="col-md-3 control-label">ID {{title}}</label>
+                      <label class="col-md-3 control-label">ID {{this.title.jenisDokumen}}</label>
                       <div class="col-md-9">
                           <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                           <span class="help-inline"> Example : JDK004. </span>
                       </div>
                   </div>
                   <div class="form-group">
-                      <label class="col-md-3 control-label">{{title}}</label>
+                      <label class="col-md-3 control-label">{{this.title.jenisDokumen}}</label>
                       <div class="col-md-9">
                           <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
                           <span class="help-inline"> Example : SM </span>

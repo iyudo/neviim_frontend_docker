@@ -4,7 +4,7 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1>Tambah {{title}}
+            <h1>Tambah {{this.title.alasanPembatalan}}
                 <small>Lorem Ipsum & net corem herid</small>
             </h1>
         </div>
@@ -15,10 +15,10 @@
               <i class="fa fa-circle"></i>              
           </li>
             <li>
-              <a [routerLink]="['/'+this.routerUrl.alasanPembatalan]">{{title}}</a>
+              <a [routerLink]="['/'+this.routerUrl.alasanPembatalan]">{{this.title.alasanPembatalan}}</a>
             </li>
             <li>
-              <span class="active">Tambah {{title}}</span>
+              <span class="active">Tambah {{this.title.alasanPembatalan}}</span>
           </li>
         </ul>
       
@@ -31,7 +31,7 @@
               <div class="form-horizontal" role="form">
                 <div class="form-body">
                   <div class="form-group">
-                      <label class="col-md-3 control-label">ID {{title}}</label>
+                      <label class="col-md-3 control-label">ID {{this.title.alasanPembatalan}}</label>
                       <div class="col-md-9">
                           <input type="text" class="form-control input-inline input-medium" placeholder="Enter ID Jenis Permohonan">
                           <span class="help-inline"> Example : BTL001. </span>

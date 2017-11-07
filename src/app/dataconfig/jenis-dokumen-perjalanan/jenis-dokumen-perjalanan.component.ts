@@ -4,7 +4,7 @@ import { JenisDokumenPerjalananService } from '../../_service/dpri/jenis-dokumen
 import { JenisDokumenPerjalanan } from '../../_model/dpri/jenis-dokumen-perjalanan';
 import { DataTable } from 'angular2-datatable';
 import { Component, OnInit } from '@angular/core';
-import {titleJdp, RouterUrl} from '../../app.var';
+import {TitleConfig, RouterUrl} from '../../app.var';
 
 @Component({
   selector: 'app-jenis-dokumen-perjalanan',
@@ -24,8 +24,6 @@ export class JenisDokumenPerjalananComponent implements OnInit {
   constructor(private jenisDokumenPerjalananService: JenisDokumenPerjalananService) { }
 
   routerUrl = RouterUrl;
-
-  constructor() { }
 
   ngOnInit() {
     this.loadJenisDokPerjalanan();
