@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlasanDokPerjalanan } from '../../../_model/dpri/alasan-dok-perjalanan';
 import { User } from '../../../_model/_common/user';
-import { RouterUrl } from '../../../app.var';
+import { RouterUrl, TitleConfig } from '../../../app.var';
 import { Router } from '@angular/router';
 import { AlasanDokPerjalananService } from '../../../_service/dpri/alasan-dok-perjalanan.service';
 
@@ -12,6 +12,7 @@ import { AlasanDokPerjalananService } from '../../../_service/dpri/alasan-dok-pe
 })
 export class EditAlasanDokumenPerjalananComponent implements OnInit {
 
+  title = TitleConfig;
   alasanDokPerjalanan: AlasanDokPerjalanan = new AlasanDokPerjalanan()
   user: User = new User()
   
@@ -23,10 +24,20 @@ export class EditAlasanDokumenPerjalananComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    let adp = this.alasanDokPerjalananService.selectedAlasanDokPerjalanan
+    this.onFindOne(adp)
   }
 
-  onFindOne() {
-    
+  onFindOne(adp: AlasanDokPerjalanan) {
+    this.alasanDokPerjalananService.findOne(adp).subscribe(
+      output => {
+        console.log("horey")
+        this.alasanDokPerjalanan = output
+      }, error => {
+        console.log(error)
+        this.router.navigate(['/' + this.routerUrl.alasanDokumenPerjalanan])
+      }
+    )
   }
 
 }
