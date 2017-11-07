@@ -9,16 +9,16 @@
             </h1>
         </div>
     </div>
-    <ul class="page-breadcrumb breadcrumb">              
+    <ul class="page-breadcrumb breadcrumb">
             <li>
               <span class="active">Konfigurasi Data</span>
-              <i class="fa fa-circle"></i>              
+              <i class="fa fa-circle"></i>
           </li>
             <li>
                 <span class="active">{{this.title.jenisDokumenPerjalanan}}</span>
             </li>
         </ul>
-      
+
   <div class="row">
     <div class="col-md-12">
         <div class="portlet light bordered">
@@ -28,7 +28,7 @@
                         <a [routerLink]="['/'+this.routerUrl.tambahJenisDokumenPerjalanan]" class="btn btn-outline btn-info btn-sm">
                             <i class="fa fa-plus"></i>
                             Add {{this.title.jenisDokumenPerjalanan}}
-                        </a>                        
+                        </a>
                         <a href="#" class="btn btn-outline green btn-sm">
                             <i class="fa fa-file-pdf-o"></i>
                             PDF
@@ -36,58 +36,59 @@
                         <a href="#" class="btn btn-outline purple btn-sm">
                             <i class="fa fa-file-excel-o"></i>
                             CSV
-                        </a> 
-                </div>                
+                        </a>
+                </div>
             </div>
             <div class="portlet-body">
-               
+
                 <a class="btn btn-outline blue btn-sm" data-toggle="modal" href="#modaljdp">
                     <i class="fa fa-search" aria-hidden="true"></i> Search
                 </a>
 
-                <button class="btn btn-outline red btn-sm">
+                <button class="btn btn-outline red btn-sm" (click)="onDeleteJenisDokPerjalanan()">
                     <i class="fa fa-trash" aria-hidden="true"></i> Delete
                 </button>
-               
+
                 <br/>
                 <br/>
-                <table class="table table-striped table-bordered table-advance table-hover" id="sample_1">            
+                <table class="table table-striped table-bordered table-advance table-hover" [mfActivePage]="activePage" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage">
                     <tr>
                         <th class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                              
-                            <input type="checkbox" value="1" name="">
+                            <input type="checkbox" value="1" name="" (click)="toggleSelect(jenisDokPerjalanan,$event)">
                             <span></span>
                           </label>
                         </th>
                         <th class="text-center">No.</th>
-                        <th>ID {{this.title.jenisDokumenPerjalanan}}n</th>
-                        <th>{{this.title.jenisDokumenPerjalanan}}</th>
-                        <th>Deskripsi</th>
-                        <th class="text-center">Status</th>                      
-                        <th class="text-center">Action</th>                   
-                    </tr>                                                                       
-                    <tr>
+                        <th><mfDefaultSorter by="idDokumenPerjalanan">ID {{this.title.jenisDokumenPerjalanan}}</mfDefaultSorter></th>
+                        <th><mfDefaultSorter by="namaDokumenPerjalanan">{{this.title.jenisDokumenPerjalanan}}</mfDefaultSorter></th>
+                        <th><mfDefaultSorter by="deskDokumenPerjalanan">Deskripsi</mfDefaultSorter></th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                    <tr *ngFor="let item of mf.data; index as i">
                         <td class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                              
-                            <input type="checkbox" value="2" name="">
+                            <input type="checkbox" value="2" name="" [checked]="item.selected" value="{{item.id}}" (change)="select(item, $event)">
                             <span></span>
                           </label>
                         </td>
-                        <td class="text-center">1.</td>
-                        <td>JD001</td>
-                        <td>DPRI Biasa 24 H</td>
-                        <td>Dokumen Perjalanan Republik Indonesia Biasa 24 Halaman</td>
-                        <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>                        
+                        <td class="text-center">{{((activePage - 1)*rowsOnPage) + i + 1}}</td>
+                        <td>{{item.idDokumenPerjalanan}}</td>
+                        <td>{{item.namaDokumenPerjalanan}}</td>
+                        <td>{{item.deskDokumenPerjalanan}}</td>
                         <td class="text-center">
-                          <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>                
+                            <span class="badge bg-green-meadow" *ngIf="item.activeStr == 'true'">Aktif</span>
+                            <span class="badge badge-danger" *ngIf="item.activeStr == 'false'">Non Aktif</span>
+                        </td>
+                        <td class="text-center">
+                          <a (click)="onEditJdp(item)" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                        </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                             
+
                             <input type="checkbox" value="3" name="">
                             <span></span>
                           </label>
@@ -96,15 +97,15 @@
                         <td>JD002</td>
                         <td>DPRI Elektronik 24 H</td>
                         <td>Dokumen Perjalanan Republik Indonesia Elektronik 24 Halaman</td>
-                        <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>                        
+                        <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>
                         <td class="text-center">
                           <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>                
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                              
+
                             <input type="checkbox" value="4" name="">
                             <span></span>
                           </label>
@@ -113,15 +114,15 @@
                         <td>JD003</td>
                         <td>DPRI Biasa 24 H</td>
                         <td>Dokumen Perjalanan Republik Indonesia Biasa 24 Halaman</td>
-                        <td class="text-center"><span class="badge badge-danger">Non Aktif</span></td>                        
+                        <td class="text-center"><span class="badge badge-danger">Non Aktif</span></td>
                         <td class="text-center">
                           <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>                
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">
                           <label class="mt-checkbox mt-checkbox-outline">
-                            
+
                             <input type="checkbox" value="5" name="">
                             <span></span>
                           </label>
@@ -130,22 +131,27 @@
                         <td>JD004</td>
                         <td>DPRI Elektronik 24 H</td>
                         <td>Dokumen Perjalanan Republik Indonesia Elektronik 24 Halaman</td>
-                        <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>                        
+                        <td class="text-center"><span class="badge bg-green-meadow">Aktif</span></td>
                         <td class="text-center">
                           <a href="#" class="btn yellow-mint btn-outline btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                        </td>                
-                    </tr>                
+                        </td>
+                    </tr>                 -->
+                    <tr>
+                        <td colspan="7">
+                            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]" (click)="setNewPage(mf.activePage)"></mfBootstrapPaginator>
+                        </td>
+                    </tr>
                 </table>
-                <div class="btn-group">
+                <!-- <div class="btn-group">
                     <button type="button" class="btn btn-default">1</button>
                     <button type="button" class="btn btn-default">2</button>
                     <button type="button" class="btn btn-default">3</button>
                     <button type="button" class="btn btn-default">4</button>
-                </div>                
+                </div>                 -->
             </div>
         </div>
     </div>
-    
+
   </div>
 
 
@@ -157,7 +163,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                   <h4 class="modal-title">Search</h4>
               </div>
-              <div class="modal-body"> 
+              <div class="modal-body">
                   <div class="form-horizontal" role="form">
                     <div class="form-body">
                           <div class="form-group">
@@ -186,7 +192,7 @@
                               <div class="col-md-8">
                                       <select class="form-control input-inline input-medium">
                                           <option>Aktif</option>
-                                          <option>Non Aktif</option>                                            
+                                          <option>Non Aktif</option>
                                       </select>
                                   <span class="help-inline"> Example: Aktif. </span>
                               </div>
@@ -195,17 +201,17 @@
                               <label class="col-md-4 control-label"></label>
                               <div class="col-md-8">
                                   <button type="button" class="btn green">Search</button>
-                                  <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>        
+                                  <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
                               </div>
-                          </div>                                                                                                
-                    </div>                     
+                          </div>
+                    </div>
                   </div>
-              </div>                
+              </div>
           </div>
           <!-- /.modal-content -->
       </div>
       <!-- /.modal-dialog -->
-  </div>  
+  </div>
 
   </div>
   <!-- END CONTENT BODY -->
