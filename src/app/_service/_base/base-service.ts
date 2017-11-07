@@ -71,7 +71,7 @@ export abstract class BaseService {
   findOne(object: object) {
     let headers = new Headers({ 'Content-Type': 'application/json' })
     let options = new RequestOptions({ headers: headers })
-    return this.http.get(this.apiUrl.concat('find/'), options)
+    return this.http.post(this.apiUrl.concat('find/'), { find : object }, options)
     .map(res => res.json())
   }
   // handleError(error) {

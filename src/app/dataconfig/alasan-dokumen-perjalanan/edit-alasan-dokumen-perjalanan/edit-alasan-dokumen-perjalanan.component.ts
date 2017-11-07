@@ -26,7 +26,7 @@ export class EditAlasanDokumenPerjalananComponent implements OnInit {
   }
 
   onFindOne() {
-
+    
   }
 
 }
