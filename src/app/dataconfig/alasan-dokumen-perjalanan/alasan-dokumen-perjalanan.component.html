@@ -121,23 +121,23 @@
                           <div class="form-group">
                               <label class="col-md-4 control-label">ID {{this.title.alasanDokumenPerjalanan}}</label>
                               <div class="col-md-8">
-                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text" [(ngModel)]="this.alasanDokPerjalanan.idAlasanDokPerjalanan">
                                   <span class="help-inline"> Example: ADP001. </span>
                               </div>
                           </div>
                           <div class="form-group">
                               <label class="col-md-4 control-label">Deskripsi</label>
                               <div class="col-md-8">
-                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text" [(ngModel)]="this.alasanDokPerjalanan.description">
                                   <span class="help-inline"> Example: Habis Berlaku. </span>
                               </div>
                           </div>
                           <div class="form-group">
                               <label class="col-md-4 control-label">Status</label>
                               <div class="col-md-8">
-                                      <select class="form-control input-inline input-medium">
-                                          <option>Aktif</option>
-                                          <option>Non Aktif</option>
+                                      <select class="form-control input-inline input-medium" [(ngModel)]="this.alasanDokPerjalanan.activeStr">
+                                          <option [value]="true">Aktif</option>
+                                          <option [value]="false">Non Aktif</option>
                                       </select>
                                   <span class="help-inline"> Example: Aktif. </span>
                               </div>
@@ -145,7 +145,7 @@
                           <div class="form-group">
                               <label class="col-md-4 control-label"></label>
                               <div class="col-md-8">
-                                  <button type="button" class="btn green">Search</button>
+                                  <button type="button" class="btn green" data-dismiss="modal" (click)="onLoadAdp()">Search</button>
                                   <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
                               </div>
                           </div>

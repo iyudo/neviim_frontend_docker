@@ -2,6 +2,7 @@ import { Http, RequestOptions, Headers } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../environments/environment';
 import 'rxjs';
+import { SearchFormat } from "./search-format";
 
 export abstract class BaseService {
 
@@ -18,6 +19,15 @@ export abstract class BaseService {
     return this.http.get(this.apiUrl.concat('list/'), options)
       .map(res => res.json())
       // .catch(this.handleError);
+  }
+
+  loadList(searchFormat: SearchFormat) {
+    let headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.apiUrl.concat('list/'), searchFormat, options)
+      .map(res => res.json())
   }
 
   /**
