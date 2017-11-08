@@ -65,6 +65,8 @@ import { JenisDokumenPerjalananService } from '../app/_service/dpri/jenis-dokume
 import { DataTableModule } from "angular2-datatable";
 import { EditJenisDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perjalanan/edit-jenis-dokumen-perjalanan/edit-jenis-dokumen-perjalanan.component';
 
+import {JenisPermohonanService} from '../app/_service/dpri/jenis-permohonan.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -126,7 +128,8 @@ import { EditJenisDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-
   ],
   providers: [
     AlasanDokPerjalananService,
-    JenisDokumenPerjalananService
+    JenisDokumenPerjalananService,
+    JenisPermohonanService
   ],
   bootstrap: [AppComponent]
 })
