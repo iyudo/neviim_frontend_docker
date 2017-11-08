@@ -52,6 +52,7 @@ export const RouterUrl = {
     tambahPersyaratanPengajuan: 'dataconfig/persyaratan-pengajuan/tambah',
     tambahMasaBerlaku: 'dataconfig/masa-berlaku/tambah',
     tambahManajemenKanim: 'dataconfig/manajemen-kanim/tambah',
+    editAlasanDokumenPerjalanan: 'dataconfig/alasan-dokumen-perjalanan/edit',
     notifikasi: 'notifikasi',
     approval: 'approval',
     notifikasiDetail: 'notifikasi/detail',

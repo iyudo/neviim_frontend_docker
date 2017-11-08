@@ -55,7 +55,7 @@ export class TambahAlasanDokumenPerjalananComponent implements OnInit {
       success => {
         console.log(success)
         this.alasanDokPerjalanan = new AlasanDokPerjalanan()
-        this.router.navigate([this.routerUrl.alasanDokumenPerjalanan])
+        this.router.navigate(['/' + this.routerUrl.alasanDokumenPerjalanan])
       }, error => {
         console.log('Something Wrong')
         console.log(error)

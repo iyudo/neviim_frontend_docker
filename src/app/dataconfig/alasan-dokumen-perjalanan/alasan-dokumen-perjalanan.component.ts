@@ -41,8 +41,13 @@ export class AlasanDokumenPerjalananComponent implements OnInit {
 
   onCheckedAdp(e) {
     if (e.target.checked) {
-      console.log("checked");
+      console.log("checked")
     }
+  }
+
+  onEditPageAdp(alasanDokPerjalanan: AlasanDokPerjalanan) {
+    this.alasanDokPerjalananService.selectedAlasanDokPerjalanan = alasanDokPerjalanan
+    this.router.navigate(['/' + this.routerUrl.editAlasanDokumenPerjalanan]);
   }
 
 }

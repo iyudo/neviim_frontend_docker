@@ -63,7 +63,7 @@ import { EditAlasanDokumenPerjalananComponent } from './dataconfig/alasan-dokume
 
 import { JenisDokumenPerjalananService } from '../app/_service/dpri/jenis-dokumen-perjalanan.service';
 import { DataTableModule } from "angular2-datatable";
-import { EditDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perjalanan/edit-dokumen-perjalanan/edit-dokumen-perjalanan/edit-dokumen-perjalanan.component';
+// import { EditDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perjalanan/edit-dokumen-perjalanan/edit-dokumen-perjalanan/edit-dokumen-perjalanan.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +111,7 @@ import { EditDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perja
     DpriPenyerahanDetailComponent,
     TambahStatusSipilComponent,
     EditAlasanDokumenPerjalananComponent,
-    EditDokumenPerjalananComponent
+    // EditDokumenPerjalananComponent
   ],
   imports: [
     BrowserModule,
