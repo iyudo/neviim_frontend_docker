@@ -41,6 +41,7 @@ export class EditAlasanDokumenPerjalananComponent implements OnInit {
   }
 
   onEditAdp() {
+    this.alasanDokPerjalanan.activeStr = String(this.alasanDokPerjalanan.active)
     this.alasanDokPerjalananService.edit(this.alasanDokPerjalanan).subscribe(
       output => {
         console.log(output)
