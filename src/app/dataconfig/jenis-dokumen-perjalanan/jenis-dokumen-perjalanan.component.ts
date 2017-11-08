@@ -3,6 +3,7 @@ import { JenisDokumenPerjalananService } from '../../_service/dpri/jenis-dokumen
 import { JenisDokumenPerjalanan } from '../../_model/dpri/jenis-dokumen-perjalanan';
 import { DataTable } from 'angular2-datatable';
 import { TitleConfig, RouterUrl } from '../../app.var';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-jenis-dokumen-perjalanan',
@@ -16,12 +17,14 @@ export class JenisDokumenPerjalananComponent implements OnInit {
   private error: any = '';
   activePage: number = 1;
   rowsOnPage: number = 2;
-  jenisDokPerjalanan: JenisDokumenPerjalanan[] = []
+  jenisDokPerjalanan: JenisDokumenPerjalanan[] = [];
+  routerUrl = RouterUrl;
   @ViewChild(DataTable) child: DataTable;
 
-  constructor(private jenisDokumenPerjalananService: JenisDokumenPerjalananService) { }
-
-  routerUrl = RouterUrl;
+  constructor(
+    private router: Router,
+    private jenisDokumenPerjalananService: JenisDokumenPerjalananService
+  ) { }
 
   ngOnInit() {
     this.loadJenisDokPerjalanan();
@@ -56,8 +59,9 @@ export class JenisDokumenPerjalananComponent implements OnInit {
     }
   }
 
-  onEditJdp(item) {
-
+  onEditJdp(jenisDokumenPerjalanan: JenisDokumenPerjalanan) {
+    this.jenisDokumenPerjalananService.selectedJenisDokPerjalanan = jenisDokumenPerjalanan;
+    this.router.navigate(["/"+this.routerUrl.editJenisDokumenPerjalanan]);
   }
 
   setNewPage(activePage: number) {

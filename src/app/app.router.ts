@@ -40,6 +40,7 @@ import { DpriPencetakanComponent } from './dpri/dpri-pencetakan/dpri-pencetakan.
 import { DpriPenyerahanComponent } from './dpri/dpri-penyerahan/dpri-penyerahan.component';
 import { DpriPenyerahanDetailComponent } from './dpri/dpri-penyerahan/dpri-penyerahan-detail/dpri-penyerahan-detail.component';
 import { DpriPermohonanComponent } from './dpri/dpri-permohonan/dpri-permohonan.component';
+import { EditJenisDokumenPerjalananComponent } from './dataconfig/jenis-dokumen-perjalanan/edit-jenis-dokumen-perjalanan/edit-jenis-dokumen-perjalanan.component';
 
 export const router: Routes = [
     {
@@ -134,6 +135,10 @@ export const router: Routes = [
     {
         path:RouterUrl.tambahJenisDokumenPerjalanan,
         component:TambahJenisDokumenPerjalananComponent
+    },
+    {
+        path:RouterUrl.editJenisDokumenPerjalanan,
+        component:EditJenisDokumenPerjalananComponent
     },
     {
         path:RouterUrl.alasanDokumenPerjalanan,

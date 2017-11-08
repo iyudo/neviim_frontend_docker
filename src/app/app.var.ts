@@ -42,6 +42,7 @@ export const RouterUrl = {
     manajemenKanim: 'dataconfig/manajemen-kanim',
     tambahJenisPermohonan: 'dataconfig/jenis-permohonan/tambah',
     tambahJenisDokumenPerjalanan: 'dataconfig/jenis-dokumen-perjalanan/tambah',
+    editJenisDokumenPerjalanan: 'dataconfig/edit-jenis-dokumen-perjalanan/edit',
     tambahJenisDokumen: 'dataconfig/jenis-dokumen/tambah',
     tambahAlasanDokumenPerjalanan: 'dataconfig/alasan-dokumen-perjalanan/tambah',
     tambahStatusSipil: 'dataconfig/status-sipil/tambah',
