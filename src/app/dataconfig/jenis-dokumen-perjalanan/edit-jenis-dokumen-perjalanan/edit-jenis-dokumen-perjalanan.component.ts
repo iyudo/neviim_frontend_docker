@@ -23,6 +23,8 @@ export class EditJenisDokumenPerjalananComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    let jdp = this.jenisDokPerjalananService.selectedJenisDokPerjalanan
+    // this.onFindOne(jdp)
   }
 
   onFindOne() {
