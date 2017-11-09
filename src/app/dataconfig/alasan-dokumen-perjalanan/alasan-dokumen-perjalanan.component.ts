@@ -32,7 +32,7 @@ export class AlasanDokumenPerjalananComponent implements OnInit {
   }
 
   noNull(any: any) {
-    return any == null ? "" : any
+    return any == null ? '' : any
   }
 
   onLoadAdp() {
@@ -40,11 +40,11 @@ export class AlasanDokumenPerjalananComponent implements OnInit {
 
     adp.active = Boolean(adp.activeStr)
 
-    this.objectSearch.searchByArr = ["idAlasanDokPerjalanan", "description", "active"]
+    this.objectSearch.searchByArr = ['idAlasanDokPerjalanan', 'description', 'active']
     this.objectSearch.keywordArr = [this.noNull(adp.idAlasanDokPerjalanan), this.noNull(adp.description), this.noNull(adp.activeStr)]
-    this.objectSearch.orderBy = ""
-    this.objectSearch.orderType = ""
-    
+    this.objectSearch.orderBy = ''
+    this.objectSearch.orderType = ''
+
     this.alasanDokPerjalananService.loadList(this.objectSearch).subscribe(
       output => {
         console.log(output)
